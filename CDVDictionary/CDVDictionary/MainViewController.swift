@@ -13,7 +13,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var displayArray = ["a", "b", "c"]
+    var sourceArray = [String]()
+    var displayArray = [String]()
+    var displayDictionary = [String:String]()
     
     let textCellIdentifier = "mainTableCellidentifier"
     let tableViewNumberOfSections:Int = 1
@@ -22,6 +24,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let path = NSBundle.mainBundle().pathForResource("Config", ofType: "plist"), _ = NSDictionary(contentsOfFile: path) as? [String: String]
+        {
+            // use swift dictionary as normal
+        }
     }
  
     // MARK: TableView DataSource
