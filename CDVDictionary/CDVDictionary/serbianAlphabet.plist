@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Aa</key>
+	<string>а (đa→джя, lja→ля, nja→ня, ja→[ь]я)</string>
+	<key>Bb</key>
+	<string>б</string>
+	<key>Cc</key>
+	<string>ц</string>
+	<key>Čč</key>
+	<string>ч (č произносится твёрже чем ć)</string>
+	<key>Ćć</key>
+	<string>ч (ć произносится мягче чем č)</string>
+	<key>Dd</key>
+	<string>д</string>
+	<key>Dž dž</key>
+	<string>дж</string>
+	<key>Đđ</key>
+	<string>джь (ђа→джя, ђе→дже, ђи→джи, ђо→джё, ђу→джю)</string>
+	<key>Ee</key>
+	<string>э (в начале и после гласных), е (после согласных)</string>
+	<key>Ff</key>
+	<string>ф</string>
+	<key>Gg</key>
+	<string>г</string>
+	<key>Hh</key>
+	<string>х</string>
+	<key>Ii</key>
+	<string>и</string>
+	<key>Jj</key>
+	<string>й (в начале слова и после гласных: ja→я, после согласных: ja→ья</string>
+	<key>Kk</key>
+	<string>к</string>
+	<key>Ll</key>
+	<string>л</string>
+	<key>Lj lj</key>
+	<string>ль (lja→ля, lje→ле, lji→ли, ljo→лё, lju→лю)</string>
+	<key>Mm</key>
+	<string>м</string>
+	<key>Nn</key>
+	<string>н</string>
+	<key>Nj nj</key>
+	<string>нь (nja→ня, nje→не, nji→ни, njo→нё, nju→ню)</string>
+	<key>Oo</key>
+	<string>о (đo→джё в начале и после гласных, ьо после согласных)</string>
+	<key>Pp</key>
+	<string>п</string>
+	<key>Rr</key>
+	<string>р (всегда, в том числе и слогообразующее)</string>
+	<key>Ss</key>
+	<string>с</string>
+	<key>Šš</key>
+	<string>ш</string>
+	<key>Tt</key>
+	<string>т</string>
+	<key>Uu</key>
+	<string>у (đu→джю, lju→лю, nju→ню, ju→[ь]ю)</string>
+	<key>Vv</key>
+	<string>в</string>
+	<key>Zz</key>
+	<string>з</string>
+</dict>
+</plist>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Аа</key>
+	<string>a</string>
+	<key>Бб</key>
+	<string>b</string>
+	<key>Вв</key>
+	<string>v</string>
+	<key>Гг</key>
+	<string>g</string>
+	<key>Дд</key>
+	<string>d</string>
+	<key>Ее</key>
+	<string>je</string>
+	<key>Ёё</key>
+	<string>jo</string>
+	<key>Жж</key>
+	<string>ž</string>
+	<key>Зз</key>
+	<string>z</string>
+	<key>Ии</key>
+	<string>i</string>
+	<key>Йй</key>
+	<string>j</string>
+	<key>Кк</key>
+	<string>k</string>
+	<key>Лл</key>
+	<string>l</string>
+	<key>Мм</key>
+	<string>m</string>
+	<key>Нн</key>
+	<string>n</string>
+	<key>Оо</key>
+	<string>o</string>
+	<key>Пп</key>
+	<string>p</string>
+	<key>Рр</key>
+	<string>r</string>
+	<key>Сс</key>
+	<string>s</string>
+	<key>Тт</key>
+	<string>t</string>
+	<key>Уу</key>
+	<string>u</string>
+	<key>Фф</key>
+	<string>f</string>
+	<key>Хх</key>
+	<string>x</string>
+	<key>Цц</key>
+	<string>ts</string>
+	<key>Чч</key>
+	<string>ʨː</string>
+	<key>Шш</key>
+	<string>ʂ</string>
+	<key>Щщ</key>
+	<string>ɕː</string>
+	<key>ъ</key>
+	<string>teško znak</string>
+	<key>Ыы</key>
+	<string>ɨ</string>
+	<key>ь</key>
+	<string>ʲ</string>
+	<key>Ээ</key>
+	<string>ɛ</string>
+	<key>Юю</key>
+	<string>ju</string>
+	<key>Яя</key>
+	<string>ja</string>
+</dict>
+</plist>

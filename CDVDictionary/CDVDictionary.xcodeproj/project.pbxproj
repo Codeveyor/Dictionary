@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E59559581C343E680046F5A7 /* russianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559561C343E680046F5A7 /* russianAlphabet.plist */; };
+		E59559591C343E680046F5A7 /* serbianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559571C343E680046F5A7 /* serbianAlphabet.plist */; };
 		E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7521C231A9600F705D0 /* AppDelegate.swift */; };
 		E5C2D7551C231A9600F705D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7541C231A9600F705D0 /* MainViewController.swift */; };
 		E5C2D7581C231A9600F705D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D7561C231A9600F705D0 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E59559561C343E680046F5A7 /* russianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = russianAlphabet.plist; sourceTree = "<group>"; };
+		E59559571C343E680046F5A7 /* serbianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serbianAlphabet.plist; sourceTree = "<group>"; };
 		E5C2D74F1C231A9600F705D0 /* CDVDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDVDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C2D7521C231A9600F705D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C2D7541C231A9600F705D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				E5C2D7591C231A9600F705D0 /* Assets.xcassets */,
 				E5C2D75B1C231A9600F705D0 /* LaunchScreen.storyboard */,
 				E5C2D75E1C231A9600F705D0 /* Info.plist */,
+				E59559561C343E680046F5A7 /* russianAlphabet.plist */,
+				E59559571C343E680046F5A7 /* serbianAlphabet.plist */,
 			);
 			path = CDVDictionary;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C2D75D1C231A9600F705D0 /* LaunchScreen.storyboard in Resources */,
+				E59559591C343E680046F5A7 /* serbianAlphabet.plist in Resources */,
+				E59559581C343E680046F5A7 /* russianAlphabet.plist in Resources */,
 				E5C2D75A1C231A9600F705D0 /* Assets.xcassets in Resources */,
 				E5C2D7581C231A9600F705D0 /* Main.storyboard in Resources */,
 			);
@@ -388,6 +396,7 @@
 				E5C2D76E1C231A9600F705D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C2D76F1C231A9600F705D0 /* Build configuration list for PBXNativeTarget "CDVDictionaryTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +405,7 @@
 				E5C2D7711C231A9600F705D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
