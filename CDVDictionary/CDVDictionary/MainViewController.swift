@@ -15,9 +15,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var sourceArray = [String]()
     var displayArray = [String]()
-    var displayDictionary = [String:String]()
+    var displayDictionary:Dictionary = Dictionary<String, String>()
     
     let textCellIdentifier = "mainTableCellidentifier"
+    let russianPlistFileName = "russianAlphabet"
+    let serbianPlistFileName = "serbianAlphabet"
     let tableViewNumberOfSections:Int = 1
     let tableViewCellHeight: CGFloat = 50.0
     let tableViewHeaderHeight: CGFloat = 0.01
@@ -25,7 +27,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        self.readPlistToDictionary()
+        self.readPlistToDictionary(russianPlistFileName)
+//        self.readPlistToDictionary(serbianPlistFileName)
     }
  
     // MARK: TableView DataSource
@@ -84,22 +87,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: Utils
     
-    func readPlistToDictionary() -> Void {
-        
-//        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-//        let documentsDirectory = paths[0] as! String
-//        let bundlePath = NSBundle.mainBundle().pathForResource("GameData", ofType: "plist")
-//        self.displayDictionary = NSMutableDictionary(contentsOfFile: bundlePath!)
+    func readPlistToDictionary(plistType: String) -> Void {
         
         let rootPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)[0]
-        let plistPathInDocument = rootPath.stringByAppendingString("/notes.plist")
+        let plistPathInDocument = rootPath.stringByAppendingString("/\(plistType).plist")
         if !NSFileManager.defaultManager().fileExistsAtPath(plistPathInDocument){
-            let plistPathInBundle = NSBundle.mainBundle().pathForResource("notes", ofType: "plist") as String!
-            do {
-                try NSFileManager.defaultManager().copyItemAtPath(plistPathInBundle, toPath: plistPathInDocument)
-            }catch{
-                print("Error occurred while copying file to document \(error)")
-            }
+            let plistPathInBundle = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!
+            self.displayDictionary = NSMutableDictionary(contentsOfFile: plistPathInBundle)
         }
     }
 }
