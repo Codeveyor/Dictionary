@@ -24,11 +24,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let path = NSBundle.mainBundle().pathForResource("Config", ofType: "plist"), _ = NSDictionary(contentsOfFile: path) as? [String: String]
-        {
-            // use swift dictionary as normal
-        }
+ 
+        self.readPlistToDictionary()
     }
  
     // MARK: TableView DataSource
@@ -66,7 +63,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: SearchBar Delegate
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        if searchText.characters.count == 0 {
+            displayArray.removeAll()
+            displayArray = displayArray + sourceArray
+        } else {
+            displayArray.removeAll()
+            //            let predicate = NSPredicate(format: "SELF == %@", searchText)
+            //            let searchResults = displayArray.filter({ (predicate) -> Bool in
+            
+        }
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -75,6 +80,27 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+    }
+    
+    // MARK: Utils
+    
+    func readPlistToDictionary() -> Void {
+        
+//        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+//        let documentsDirectory = paths[0] as! String
+//        let bundlePath = NSBundle.mainBundle().pathForResource("GameData", ofType: "plist")
+//        self.displayDictionary = NSMutableDictionary(contentsOfFile: bundlePath!)
+        
+        let rootPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)[0]
+        let plistPathInDocument = rootPath.stringByAppendingString("/notes.plist")
+        if !NSFileManager.defaultManager().fileExistsAtPath(plistPathInDocument){
+            let plistPathInBundle = NSBundle.mainBundle().pathForResource("notes", ofType: "plist") as String!
+            do {
+                try NSFileManager.defaultManager().copyItemAtPath(plistPathInBundle, toPath: plistPathInDocument)
+            }catch{
+                print("Error occurred while copying file to document \(error)")
+            }
+        }
     }
 }
 
