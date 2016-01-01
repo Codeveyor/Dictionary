@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E57761961C370E4900C12B31 /* ExpandAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57761951C370E4900C12B31 /* ExpandAnimator.swift */; };
 		E59559581C343E680046F5A7 /* russianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559561C343E680046F5A7 /* russianAlphabet.plist */; };
 		E59559591C343E680046F5A7 /* serbianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559571C343E680046F5A7 /* serbianAlphabet.plist */; };
 		E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7521C231A9600F705D0 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E57761951C370E4900C12B31 /* ExpandAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandAnimator.swift; sourceTree = "<group>"; };
 		E59559561C343E680046F5A7 /* russianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = russianAlphabet.plist; sourceTree = "<group>"; };
 		E59559571C343E680046F5A7 /* serbianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serbianAlphabet.plist; sourceTree = "<group>"; };
 		E5C2D74F1C231A9600F705D0 /* CDVDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDVDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				E5C2D7521C231A9600F705D0 /* AppDelegate.swift */,
 				E5C2D7541C231A9600F705D0 /* MainViewController.swift */,
 				E5C2D7561C231A9600F705D0 /* Main.storyboard */,
+				E57761951C370E4900C12B31 /* ExpandAnimator.swift */,
 				E5C2D7591C231A9600F705D0 /* Assets.xcassets */,
 				E5C2D75B1C231A9600F705D0 /* LaunchScreen.storyboard */,
 				E5C2D75E1C231A9600F705D0 /* Info.plist */,
@@ -207,6 +210,7 @@
 			files = (
 				E5C2D7551C231A9600F705D0 /* MainViewController.swift in Sources */,
 				E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */,
+				E57761961C370E4900C12B31 /* ExpandAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
