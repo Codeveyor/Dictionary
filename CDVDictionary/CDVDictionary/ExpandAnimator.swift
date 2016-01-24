@@ -83,10 +83,8 @@ class ExpandAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                     
                     // Remove snapshot view from contatiner view
                     snapshotView.removeFromSuperview()
-                    
                     // Make to view controller visible
                     toViewController.view.alpha = 0.0
-                    
                     // Complete transition
                     transitionContext.completeTransition(finished)
             })
@@ -105,10 +103,8 @@ class ExpandAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                     
                     // Remove snapshot view from contatiner view
                     snapshotView.removeFromSuperview()
-                    
                     // Make to view controller visible
                     toViewController.view.alpha = 0.0
-                    
                     // Complete transition
                     transitionContext.completeTransition(finished)
             })

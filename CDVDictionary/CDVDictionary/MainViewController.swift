@@ -74,6 +74,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //            let predicate = NSPredicate(format: "SELF == %@", searchText)
             //            let searchResults = displayArray.filter({ (predicate) -> Bool in
             
+            for key: String in sourceArray {
+                let word = key as String
+                if word.rangeOfString(key) {
+                    
+                }
+            }
         }
     }
     
