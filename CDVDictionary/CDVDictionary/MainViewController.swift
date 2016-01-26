@@ -76,7 +76,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             for key: String in sourceArray {
                 let word = key as String
-                if word.rangeOfString(key) {
+                if word.rangeOfString(key) != nil {
                     
                 }
             }
@@ -98,8 +98,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let rootPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)[0]
         let plistPathInDocument = rootPath.stringByAppendingString("/\(plistType).plist")
         if !NSFileManager.defaultManager().fileExistsAtPath(plistPathInDocument){
-            let plistPathInBundle = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!
-            self.displayDictionary = NSMutableDictionary(contentsOfFile: plistPathInBundle)
+//            let plistPathInBundle : String = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!
+//            self.displayDictionary = NSMutableDictionary(contentsOfFile: plistPathInBundle)
         }
     }
 }
