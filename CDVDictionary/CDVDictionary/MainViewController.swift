@@ -9,34 +9,34 @@
 import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var sourceArray = [String]()
     var displayArray = [String]()
-    var displayDictionary:Dictionary = Dictionary<String, String>()
+    //    var displayDictionary:Dictionary = Dictionary<String, String>()
     
     let textCellIdentifier = "mainTableCellidentifier"
     let russianPlistFileName = "russianAlphabet"
     let serbianPlistFileName = "serbianAlphabet"
-    let tableViewNumberOfSections:Int = 1
+    let tableViewNumberOfSections : Int = 1
     let tableViewCellHeight: CGFloat = 50.0
     let tableViewHeaderHeight: CGFloat = 0.01
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         self.readPlistToDictionary(russianPlistFileName)
-//        self.readPlistToDictionary(serbianPlistFileName)
+        //        self.readPlistToDictionary(serbianPlistFileName)
     }
- 
+    
     // MARK: TableView DataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return tableViewNumberOfSections
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayArray.count
     }
@@ -97,10 +97,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let rootPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)[0]
         let plistPathInDocument = rootPath.stringByAppendingString("/\(plistType).plist")
+        let data = NSData(contentsOfFile: plistPathInDocument)
+        
         if !NSFileManager.defaultManager().fileExistsAtPath(plistPathInDocument){
-//            let plistPathInBundle : String = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!
-//            self.displayDictionary = NSMutableDictionary(contentsOfFile: plistPathInBundle)
+            //            let plistPathInBundle : String = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!
+            //            self.displayDictionary = NSMutableDictionary(contentsOfFile: plistPathInBundle)
         }
     }
 }
+
 
