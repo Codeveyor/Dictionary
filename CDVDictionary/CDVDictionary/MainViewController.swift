@@ -20,7 +20,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let textCellIdentifier = "mainTableCellidentifier"
     let russianPlistFileName = "russianAlphabet"
     let serbianPlistFileName = "serbianAlphabet"
-    let tableViewNumberOfSections : Int = 1
+    let tableViewNumberOfSections: Int = 1
     let tableViewCellHeight: CGFloat = 50.0
     let tableViewHeaderHeight: CGFloat = 0.01
     
@@ -98,6 +98,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let rootPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)[0]
         let plistPathInDocument = rootPath.stringByAppendingString("/\(plistType).plist")
         let data = NSData(contentsOfFile: plistPathInDocument)
+//        let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as NSDictionary
         
         if !NSFileManager.defaultManager().fileExistsAtPath(plistPathInDocument){
             //            let plistPathInBundle : String = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!

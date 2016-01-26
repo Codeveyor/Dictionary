@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions
+                   launchOptions: [NSObject: AnyObject]?) -> Bool {
         copyPlistFiles()
         return true
     }
@@ -34,32 +35,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
     }
     
-    func copyPlistFiles()
-    {
-        let directoryPaths =  NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)
-        let docsDir = directoryPaths[0] 
-        var error:NSError?
-        let destinationPath = (docsDir as NSString).stringByAppendingPathComponent("/russianAlphabet.plist")
+    func copyPlistFiles() {
         
-        var fileManager = NSFileManager.defaultManager()
+        let bundlePath = NSBundle.mainBundle().pathForResource("russianAlphabet", ofType: ".plist")
+        print(bundlePath, "\n") //prints the correct path
+        let destinationPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+        let fileManager = NSFileManager.defaultManager()
+        let fullDestinationPath = NSURL(fileURLWithPath: destinationPath).URLByAppendingPathComponent("russianAlphabet.plist")
+        let fullDestinationPathString = fullDestinationPath.path
+        print(fileManager.fileExistsAtPath(bundlePath!)) // prints true
         
-        if let path = NSBundle.mainBundle().pathForResource("russianAlphabet", ofType:"plist") {
-            print(path)
-            if fileManager.copyItemAtPath(path, toPath: destinationPath) == true {
-                print("success")
-            }
-            else {
-                print("failed, it's already there")
-                print(error?.localizedDescription)
-            }
-        }
-        
-        if let files = fileManager.contentsOfDirectoryAtPath(docsDir)
-        {
-            for filename in files{
-                print(filename)
-            }
+        do {
+            try fileManager.copyItemAtPath(bundlePath!, toPath: fullDestinationPathString!)
+        } catch {
+            print("\n")
+            print(error)
         }
     }
 }
+
 
