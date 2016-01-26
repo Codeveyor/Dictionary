@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1220765AF6F8FB1FE415312B /* Pods_CDVDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC9A649728045A8E9C77828 /* Pods_CDVDictionary.framework */; };
 		E59559581C343E680046F5A7 /* russianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559561C343E680046F5A7 /* russianAlphabet.plist */; };
 		E59559591C343E680046F5A7 /* serbianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559571C343E680046F5A7 /* serbianAlphabet.plist */; };
 		E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7521C231A9600F705D0 /* AppDelegate.swift */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EC9A649728045A8E9C77828 /* Pods_CDVDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDVDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8268E510E500651824125423 /* Pods-CDVDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionary/Pods-CDVDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 		E59559561C343E680046F5A7 /* russianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = russianAlphabet.plist; sourceTree = "<group>"; };
 		E59559571C343E680046F5A7 /* serbianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serbianAlphabet.plist; sourceTree = "<group>"; };
 		E5C2D74F1C231A9600F705D0 /* CDVDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDVDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +43,7 @@
 		E5C2D7631C231A9600F705D0 /* CDVDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C2D7671C231A9600F705D0 /* CDVDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryTests.swift; sourceTree = "<group>"; };
 		E5C2D7691C231A9600F705D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECC5CED5E7ADB075F71D103 /* Pods-CDVDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionary/Pods-CDVDictionary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1220765AF6F8FB1FE415312B /* Pods_CDVDictionary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49DB1EFDD044997FA13D7A3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EC9A649728045A8E9C77828 /* Pods_CDVDictionary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0EDCD2981783CF80A3CB695 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8268E510E500651824125423 /* Pods-CDVDictionary.debug.xcconfig */,
+				FECC5CED5E7ADB075F71D103 /* Pods-CDVDictionary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E5C2D7461C231A9600F705D0 = {
 			isa = PBXGroup;
 			children = (
 				E5C2D7511C231A9600F705D0 /* CDVDictionary */,
 				E5C2D7661C231A9600F705D0 /* CDVDictionaryTests */,
 				E5C2D7501C231A9600F705D0 /* Products */,
+				B0EDCD2981783CF80A3CB695 /* Pods */,
+				49DB1EFDD044997FA13D7A3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,10 +133,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C2D76C1C231A9600F705D0 /* Build configuration list for PBXNativeTarget "CDVDictionary" */;
 			buildPhases = (
+				659381086259E34E8E074F57 /* Check Pods Manifest.lock */,
 				E5C2D74B1C231A9600F705D0 /* Sources */,
 				E5C2D74C1C231A9600F705D0 /* Frameworks */,
 				E5C2D74D1C231A9600F705D0 /* Resources */,
 				E52DF2B81C58152D00159469 /* ShellScript */,
+				83C94D896A04330922D07A43 /* Embed Pods Frameworks */,
+				C25AD152FC3FB9FEF706153C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +229,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		659381086259E34E8E074F57 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83C94D896A04330922D07A43 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDVDictionary/Pods-CDVDictionary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C25AD152FC3FB9FEF706153C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDVDictionary/Pods-CDVDictionary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E52DF2B81C58152D00159469 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +422,7 @@
 		};
 		E5C2D76D1C231A9600F705D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8268E510E500651824125423 /* Pods-CDVDictionary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
@@ -361,6 +434,7 @@
 		};
 		E5C2D76E1C231A9600F705D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FECC5CED5E7ADB075F71D103 /* Pods-CDVDictionary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
