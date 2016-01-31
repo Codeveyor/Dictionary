@@ -97,8 +97,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let rootPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)[0]
         let plistPathInDocument = rootPath.stringByAppendingString("/\(plistType).plist")
-        let data = NSData(contentsOfFile: plistPathInDocument)
-//        let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as NSDictionary
+        let data: NSData = NSData(contentsOfFile: plistPathInDocument)!
+        let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
         
         if !NSFileManager.defaultManager().fileExistsAtPath(plistPathInDocument){
             //            let plistPathInBundle : String = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!

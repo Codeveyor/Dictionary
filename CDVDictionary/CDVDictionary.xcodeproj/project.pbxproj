@@ -137,7 +137,6 @@
 				E5C2D74B1C231A9600F705D0 /* Sources */,
 				E5C2D74C1C231A9600F705D0 /* Frameworks */,
 				E5C2D74D1C231A9600F705D0 /* Resources */,
-				E52DF2B81C58152D00159469 /* ShellScript */,
 				83C94D896A04330922D07A43 /* Embed Pods Frameworks */,
 				C25AD152FC3FB9FEF706153C /* Copy Pods Resources */,
 			);
@@ -273,19 +272,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDVDictionary/Pods-CDVDictionary-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		E52DF2B81C58152D00159469 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
