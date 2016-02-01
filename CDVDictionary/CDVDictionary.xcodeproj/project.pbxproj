@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1220765AF6F8FB1FE415312B /* Pods_CDVDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC9A649728045A8E9C77828 /* Pods_CDVDictionary.framework */; };
+		E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */; };
 		E59559581C343E680046F5A7 /* russianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559561C343E680046F5A7 /* russianAlphabet.plist */; };
 		E59559591C343E680046F5A7 /* serbianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E59559571C343E680046F5A7 /* serbianAlphabet.plist */; };
 		E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7521C231A9600F705D0 /* AppDelegate.swift */; };
@@ -19,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E5249A221C600C1900BE9846 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5C2D7471C231A9600F705D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5C2D74E1C231A9600F705D0;
+			remoteInfo = CDVDictionary;
+		};
 		E5C2D7641C231A9600F705D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E5C2D7471C231A9600F705D0 /* Project object */;
@@ -31,6 +39,9 @@
 /* Begin PBXFileReference section */
 		2EC9A649728045A8E9C77828 /* Pods_CDVDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CDVDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8268E510E500651824125423 /* Pods-CDVDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionary/Pods-CDVDictionary.debug.xcconfig"; sourceTree = "<group>"; };
+		E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryUITests.swift; sourceTree = "<group>"; };
+		E5249A211C600C1900BE9846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E59559561C343E680046F5A7 /* russianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = russianAlphabet.plist; sourceTree = "<group>"; };
 		E59559571C343E680046F5A7 /* serbianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serbianAlphabet.plist; sourceTree = "<group>"; };
 		E5C2D74F1C231A9600F705D0 /* CDVDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDVDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E5249A1A1C600C1900BE9846 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C2D74C1C231A9600F705D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,11 +100,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E5249A1E1C600C1900BE9846 /* CDVDictionaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */,
+				E5249A211C600C1900BE9846 /* Info.plist */,
+			);
+			path = CDVDictionaryUITests;
+			sourceTree = "<group>";
+		};
 		E5C2D7461C231A9600F705D0 = {
 			isa = PBXGroup;
 			children = (
 				E5C2D7511C231A9600F705D0 /* CDVDictionary */,
 				E5C2D7661C231A9600F705D0 /* CDVDictionaryTests */,
+				E5249A1E1C600C1900BE9846 /* CDVDictionaryUITests */,
 				E5C2D7501C231A9600F705D0 /* Products */,
 				B0EDCD2981783CF80A3CB695 /* Pods */,
 				49DB1EFDD044997FA13D7A3A /* Frameworks */,
@@ -98,6 +126,7 @@
 			children = (
 				E5C2D74F1C231A9600F705D0 /* CDVDictionary.app */,
 				E5C2D7631C231A9600F705D0 /* CDVDictionaryTests.xctest */,
+				E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +158,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E5249A1C1C600C1900BE9846 /* CDVDictionaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5249A261C600C1900BE9846 /* Build configuration list for PBXNativeTarget "CDVDictionaryUITests" */;
+			buildPhases = (
+				E5249A191C600C1900BE9846 /* Sources */,
+				E5249A1A1C600C1900BE9846 /* Frameworks */,
+				E5249A1B1C600C1900BE9846 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5249A231C600C1900BE9846 /* PBXTargetDependency */,
+			);
+			name = CDVDictionaryUITests;
+			productName = CDVDictionaryUITests;
+			productReference = E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E5C2D74E1C231A9600F705D0 /* CDVDictionary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C2D76C1C231A9600F705D0 /* Build configuration list for PBXNativeTarget "CDVDictionary" */;
@@ -177,6 +224,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Alex Golub";
 				TargetAttributes = {
+					E5249A1C1C600C1900BE9846 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = E5C2D74E1C231A9600F705D0;
+					};
 					E5C2D74E1C231A9600F705D0 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -201,11 +252,19 @@
 			targets = (
 				E5C2D74E1C231A9600F705D0 /* CDVDictionary */,
 				E5C2D7621C231A9600F705D0 /* CDVDictionaryTests */,
+				E5249A1C1C600C1900BE9846 /* CDVDictionaryUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E5249A1B1C600C1900BE9846 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C2D74D1C231A9600F705D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +335,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E5249A191C600C1900BE9846 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C2D74B1C231A9600F705D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +363,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E5249A231C600C1900BE9846 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5C2D74E1C231A9600F705D0 /* CDVDictionary */;
+			targetProxy = E5249A221C600C1900BE9846 /* PBXContainerItemProxy */;
+		};
 		E5C2D7651C231A9600F705D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E5C2D74E1C231A9600F705D0 /* CDVDictionary */;
@@ -323,6 +395,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E5249A241C600C1900BE9846 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CDVDictionaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeveyor.CDVDictionaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CDVDictionary;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E5249A251C600C1900BE9846 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CDVDictionaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeveyor.CDVDictionaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CDVDictionary;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		E5C2D76A1C231A9600F705D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -457,6 +553,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E5249A261C600C1900BE9846 /* Build configuration list for PBXNativeTarget "CDVDictionaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5249A241C600C1900BE9846 /* Debug */,
+				E5249A251C600C1900BE9846 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E5C2D74A1C231A9600F705D0 /* Build configuration list for PBXProject "CDVDictionary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
