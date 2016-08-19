@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AEXML
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
@@ -16,20 +15,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var sourceArray = [String]()
     var displayArray = [String]()
-    //    var displayDictionary:Dictionary = Dictionary<String, String>()
-    
+    var displayDictionary: Dictionary = [String: String]()
+
     let textCellIdentifier = "mainTableCellidentifier"
     let russianPlistFileName = "russianAlphabet"
     let serbianPlistFileName = "serbianAlphabet"
+    let plistExtension = ".plist"
     let tableViewNumberOfSections: Int = 1
     let tableViewCellHeight: CGFloat = 50.0
     let tableViewHeaderHeight: CGFloat = 0.01
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.readPlistToDictionary(russianPlistFileName)
-        //        self.readPlistToDictionary(serbianPlistFileName)
     }
     
     // MARK: TableView DataSource
@@ -44,8 +42,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = displayArray[indexPath.row]
-        cell.detailTextLabel?.text = displayArray[indexPath.row]
+        let word = displayArray[indexPath.row]
+        cell.textLabel?.text = word
+        cell.detailTextLabel?.text = displayDictionary[word]
         
         return cell
     }
@@ -83,45 +82,28 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
-    
+
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
-    
+
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
-    
+
     // MARK: Utils
-    
-    func readPlistToDictionary(plistType: String) -> Void {
-        
-//        let rootPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, .UserDomainMask, true)[0]
-//        let plistPathInDocument = rootPath.stringByAppendingString("/\(plistType).plist")
-//        let data: NSData = NSData(contentsOfFile: plistPathInDocument)!
-//        let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as! NSDictionary
-        
-//        if !NSFileManager.defaultManager().fileExistsAtPath(plistPathInDocument){
-//            //            let plistPathInBundle : String = NSBundle.mainBundle().pathForResource(plistType, ofType: "plist") as String!
-//            //            self.displayDictionary = NSMutableDictionary(contentsOfFile: plistPathInBundle)
-//        }
-        
-        guard let
-            xmlPath = NSBundle.mainBundle().pathForResource("example", ofType: "plist"),
-            data = NSData(contentsOfFile: xmlPath)
-            else { return }
-//        let xmlDoc = AEXMLDocument(xmlData: data)
-//        print(xmlDoc.xmlString)
-        
-        do {
-            let xmlDoc = try AEXMLDocument(xmlData: data)
-            
-            // prints the same XML structure as original
-            print(xmlDoc.xmlString)
-        } catch error {
-            
+
+    private func readPlistToDictionary(plistType: String) -> Void {
+        if let path = pathInTestBundle(forFileWithName: plistType) {
+            displayDictionary = NSDictionary(contentsOfFile: path) as! [String: String]
+            displayArray.appendContentsOf(displayDictionary.keys)
+            tableView.reloadData()
         }
     }
+
+    private func pathInTestBundle(forFileWithName name: String) -> String? {
+        let bundle = NSBundle(forClass:object_getClass(self))
+        let safePath = bundle.pathForResource(name, ofType: plistExtension)
+        return safePath
+    }
 }
-
-
