@@ -18,6 +18,8 @@
 		E5F921721D675BB3007F6524 /* serbianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F921701D675BB3007F6524 /* serbianAlphabet.plist */; };
 		E5F921751D675F50007F6524 /* DictionaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F921741D675F50007F6524 /* DictionaryCell.swift */; };
 		E5F921781D675FC5007F6524 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F921771D675FC5007F6524 /* MainViewController.swift */; };
+		E5F9217B1D676C4D007F6524 /* DICT_R-S.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F921791D676C4D007F6524 /* DICT_R-S.plist */; };
+		E5F9217C1D676C4D007F6524 /* DICT_S-R.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F9217A1D676C4D007F6524 /* DICT_S-R.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		E5F921701D675BB3007F6524 /* serbianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serbianAlphabet.plist; sourceTree = "<group>"; };
 		E5F921741D675F50007F6524 /* DictionaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryCell.swift; sourceTree = "<group>"; };
 		E5F921771D675FC5007F6524 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E5F921791D676C4D007F6524 /* DICT_R-S.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DICT_R-S.plist"; sourceTree = "<group>"; };
+		E5F9217A1D676C4D007F6524 /* DICT_S-R.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DICT_S-R.plist"; sourceTree = "<group>"; };
 		FECC5CED5E7ADB075F71D103 /* Pods-CDVDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionary/Pods-CDVDictionary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				E5C2D7591C231A9600F705D0 /* Assets.xcassets */,
+				E5F921791D676C4D007F6524 /* DICT_R-S.plist */,
+				E5F9217A1D676C4D007F6524 /* DICT_S-R.plist */,
 				E5C2D75E1C231A9600F705D0 /* Info.plist */,
 				E5C2D75B1C231A9600F705D0 /* LaunchScreen.storyboard */,
 				E5C2D7561C231A9600F705D0 /* Main.storyboard */,
@@ -297,8 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C2D75D1C231A9600F705D0 /* LaunchScreen.storyboard in Resources */,
+				E5F9217B1D676C4D007F6524 /* DICT_R-S.plist in Resources */,
 				E5F921721D675BB3007F6524 /* serbianAlphabet.plist in Resources */,
 				E5F921711D675BB3007F6524 /* russianAlphabet.plist in Resources */,
+				E5F9217C1D676C4D007F6524 /* DICT_S-R.plist in Resources */,
 				E5C2D75A1C231A9600F705D0 /* Assets.xcassets in Resources */,
 				E5C2D7581C231A9600F705D0 /* Main.storyboard in Resources */,
 			);

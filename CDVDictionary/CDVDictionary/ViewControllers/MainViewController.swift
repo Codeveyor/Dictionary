@@ -16,8 +16,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var displayArray = [String]()
     private var displayDictionary: Dictionary = [String: String]()
     private let textCellIdentifier = "mainTableCellidentifier"
-    private let russianPlistFileName = "russianAlphabet"
-    private let serbianPlistFileName = "serbianAlphabet"
+    private let russianSerbianPlist = "DICT_R-S"
+    private let serbianRussianPlist = "DICT_S-R"
     private let plistExtension = ".plist"
     private let tableViewNumberOfSections: Int = 1
     private let tableViewCellHeight: CGFloat = 50.0
@@ -25,7 +25,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.readPlistToDictionary(russianPlistFileName)
+        self.readPlistToDictionary(russianSerbianPlist)
     }
 
     // MARK: TableView DataSource
