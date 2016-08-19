@@ -32,13 +32,45 @@
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainTableCellidentifier" rowHeight="50" id="eeU-9l-Bkr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainTableCellidentifier" rowHeight="50" id="eeU-9l-Bkr" customClass="DictionaryCell" customModule="CDVDictionary">
                                         <rect key="frame" x="0.0" y="50" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eeU-9l-Bkr" id="as7-mP-a0E">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESJ-Fc-vga">
+                                                    <rect key="frame" x="20" y="8" width="560" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Qme-dQ-79h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I07-zq-3KE">
+                                                    <rect key="frame" x="20" y="29" width="560" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="nWo-vt-CTs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ESJ-Fc-vga" secondAttribute="trailing" constant="12" id="5qD-53-urH"/>
+                                                <constraint firstItem="ESJ-Fc-vga" firstAttribute="top" secondItem="as7-mP-a0E" secondAttribute="topMargin" id="JgP-Iq-LvB"/>
+                                                <constraint firstItem="I07-zq-3KE" firstAttribute="top" secondItem="ESJ-Fc-vga" secondAttribute="bottom" id="VhB-t3-zC3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I07-zq-3KE" secondAttribute="trailing" constant="12" id="Xat-dT-cyo"/>
+                                                <constraint firstItem="I07-zq-3KE" firstAttribute="leading" secondItem="as7-mP-a0E" secondAttribute="leadingMargin" constant="12" id="a1K-1w-f4a"/>
+                                                <constraint firstItem="ESJ-Fc-vga" firstAttribute="leading" secondItem="as7-mP-a0E" secondAttribute="leadingMargin" constant="12" id="dDM-b1-RYn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="translationLabel" destination="I07-zq-3KE" id="828-7W-ENS"/>
+                                            <outlet property="wordLabel" destination="ESJ-Fc-vga" id="iSx-eL-z1I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

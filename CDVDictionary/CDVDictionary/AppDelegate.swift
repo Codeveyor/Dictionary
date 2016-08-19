@@ -36,21 +36,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func copyPlistFiles() {
-        
-        let bundlePath = NSBundle.mainBundle().pathForResource("russianAlphabet", ofType: ".plist")
-//        print(bundlePath, "\n") //prints the correct path
-        let destinationPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
-        let fileManager = NSFileManager.defaultManager()
-        let fullDestinationPath = NSURL(fileURLWithPath: destinationPath).URLByAppendingPathComponent("russianAlphabet.plist")
-        let fullDestinationPathString = fullDestinationPath.path
-//        print(fileManager.fileExistsAtPath(bundlePath!)) // prints true
-
-        do {
-            try fileManager.copyItemAtPath(bundlePath!, toPath: fullDestinationPathString!)
-        } catch {
-            print("\n")
-            print(error)
-        }
+//        
+//        let bundlePath = NSBundle.mainBundle().pathForResource("russianAlphabet", ofType: ".plist")
+////        print(bundlePath, "\n") //prints the correct path
+//        let destinationPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+//        let fileManager = NSFileManager.defaultManager()
+//        let fullDestinationPath = NSURL(fileURLWithPath: destinationPath).URLByAppendingPathComponent("russianAlphabet.plist")
+//        let fullDestinationPathString = fullDestinationPath.path
+////        print(fileManager.fileExistsAtPath(bundlePath!)) // prints true
+//
+//        do {
+//            try fileManager.copyItemAtPath(bundlePath!, toPath: fullDestinationPathString!)
+//        } catch {
+//            print("\n")
+//            print(error)
+//        }
     }
 }
 
