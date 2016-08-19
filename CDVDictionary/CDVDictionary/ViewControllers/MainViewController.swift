@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class MainViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
     private var sourceArray = [String]()
     private var displayArray = [String]()
     private var displayDictionary: Dictionary = [String: String]()
-    private let textCellIdentifier = "mainTableCellidentifier"
+    private let textCellIdentifier = "mainTableCellIdentifier"
     private let russianSerbianPlist = "DICT_R-S"
     private let serbianRussianPlist = "DICT_S-R"
     private let plistExtension = ".plist"
@@ -27,9 +27,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         self.readPlistToDictionary(russianSerbianPlist)
     }
+}
 
-    // MARK: TableView DataSource
-
+extension MainViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return tableViewNumberOfSections
     }
@@ -45,9 +45,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.translationLabel?.text = displayDictionary[word]
         return cell
     }
+}
 
-    // MARK: TableView Delegate
-
+extension MainViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
     }
@@ -59,9 +59,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableViewHeaderHeight
     }
+}
 
-    // MARK: SearchBar Delegate
-
+extension MainViewController: UISearchBarDelegate {
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         displayArray.removeAll()
         if searchText.characters.count == 0 {
@@ -72,7 +72,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             for key: String in sourceArray {
                 let word = key as String
                 if word.rangeOfString(key) != nil {
-                    
+                    displayArray.append(word)
                 }
             }
         }
@@ -85,14 +85,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
+}
 
+extension MainViewController {
     // MARK: Utils
-
     private func readPlistToDictionary(plistType: String) -> Void {
         if let path = pathInTestBundle(forFileWithName: plistType) {
             displayDictionary = NSDictionary(contentsOfFile: path) as! [String: String]
             sourceArray.appendContentsOf(displayDictionary.keys)
-            sourceArray.sortInPlace { $0 < $1 }
+            sourceArray.sortInPlace { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
             displayArray.appendContentsOf(sourceArray)
             tableView.reloadData()
         }
