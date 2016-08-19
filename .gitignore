@@ -17,6 +17,9 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+# Resources
+CDVDictionary/CDVDictionary/Resources 
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
