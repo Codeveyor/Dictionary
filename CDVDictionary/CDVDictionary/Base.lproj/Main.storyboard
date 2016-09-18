@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v3u-dz-9yQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3u-dz-9yQ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -15,11 +16,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-tz-jZQ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="1id-Yj-Sr4"/>
                                 </constraints>
@@ -29,32 +29,29 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pe4-f2-Bj6">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainTableCellIdentifier" rowHeight="50" id="eeU-9l-Bkr" customClass="DictionaryCell" customModule="CDVDictionary">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eeU-9l-Bkr" id="as7-mP-a0E">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                            <frame key="frameInset" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESJ-Fc-vga">
-                                                    <rect key="frame" x="20" y="6" width="560" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Qme-dQ-79h"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I07-zq-3KE">
-                                                    <rect key="frame" x="20" y="27" width="560" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="nWo-vt-CTs"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -79,16 +76,15 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="yXF-tz-jZQ" secondAttribute="trailing" constant="-20" id="1t0-Ln-yT7"/>
+                            <constraint firstItem="pe4-f2-Bj6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="78Y-Xe-lMo"/>
                             <constraint firstItem="pe4-f2-Bj6" firstAttribute="top" secondItem="yXF-tz-jZQ" secondAttribute="bottom" id="CfI-13-3Jp"/>
+                            <constraint firstAttribute="trailing" secondItem="pe4-f2-Bj6" secondAttribute="trailing" id="DDF-Fj-bSt"/>
+                            <constraint firstAttribute="trailing" secondItem="yXF-tz-jZQ" secondAttribute="trailing" id="UBd-rw-5jI"/>
                             <constraint firstItem="yXF-tz-jZQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wcw-pB-fLh"/>
+                            <constraint firstItem="yXF-tz-jZQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XA4-WB-m2h"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pe4-f2-Bj6" secondAttribute="bottom" id="dgf-H2-fct"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pe4-f2-Bj6" secondAttribute="trailing" constant="-20" id="gvi-wF-Mlb"/>
-                            <constraint firstItem="pe4-f2-Bj6" firstAttribute="top" secondItem="yXF-tz-jZQ" secondAttribute="bottom" id="h31-Gn-Q2F"/>
-                            <constraint firstItem="pe4-f2-Bj6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vPz-E3-Cx6"/>
-                            <constraint firstItem="yXF-tz-jZQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="xsJ-xe-3Ul"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ACp-dE-IiL"/>
@@ -99,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226" y="357"/>
+            <point key="canvasLocation" x="1224.8" y="356.67166416791605"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SYh-7f-hKi">

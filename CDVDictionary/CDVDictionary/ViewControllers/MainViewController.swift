@@ -12,16 +12,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
-    private var sourceArray = [String]()
-    private var displayArray = [String]()
-    private var displayDictionary: Dictionary = [String: String]()
-    private let textCellIdentifier = "mainTableCellIdentifier"
-    private let russianSerbianPlist = "DICT_R-S"
-    private let serbianRussianPlist = "DICT_S-R"
-    private let plistExtension = ".plist"
-    private let tableViewNumberOfSections: Int = 1
-    private let tableViewCellHeight: CGFloat = 50.0
-    private let tableViewHeaderHeight: CGFloat = 0.01
+    fileprivate var sourceArray = [String]()
+    fileprivate var displayArray = [String]()
+    fileprivate var displayDictionary: Dictionary = [String: String]()
+    fileprivate let textCellIdentifier = "mainTableCellIdentifier"
+    fileprivate let russianSerbianPlist = "DICT_R-S"
+    fileprivate let serbianRussianPlist = "DICT_S-R"
+    fileprivate let plistExtension = ".plist"
+    fileprivate let tableViewNumberOfSections: Int = 1
+    fileprivate let tableViewCellHeight: CGFloat = 50.0
+    fileprivate let tableViewHeaderHeight: CGFloat = 0.01
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +30,17 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewNumberOfSections
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayArray.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! DictionaryCell
-        let word = displayArray[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! DictionaryCell
+        let word = displayArray[(indexPath as NSIndexPath).row]
         cell.wordLabel?.text = word
         cell.translationLabel?.text = displayDictionary[word]
         return cell
@@ -48,60 +48,60 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     }
 
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableViewCellHeight
     }
 
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableViewHeaderHeight
     }
 }
 
 extension MainViewController: UISearchBarDelegate {
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         displayArray.removeAll()
         if searchText.characters.count == 0 {
-            displayArray.appendContentsOf(sourceArray)
+            displayArray.append(contentsOf: sourceArray)
         } else {
             //            let predicate = NSPredicate(format: "SELF == %@", searchText)
             //            let searchResults = displayArray.filter({ (predicate) -> Bool in
             for key: String in sourceArray {
                 let word = key as String
-                if word.rangeOfString(key) != nil {
+                if word.range(of: key) != nil {
                     displayArray.append(word)
                 }
             }
         }
     }
 
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
 
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
 }
 
 extension MainViewController {
     // MARK: Utils
-    private func readPlistToDictionary(plistType: String) -> Void {
+    fileprivate func readPlistToDictionary(_ plistType: String) -> Void {
         if let path = pathInTestBundle(forFileWithName: plistType) {
             displayDictionary = NSDictionary(contentsOfFile: path) as! [String: String]
-            sourceArray.appendContentsOf(displayDictionary.keys)
-            sourceArray.sortInPlace { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending }
-            displayArray.appendContentsOf(sourceArray)
+            sourceArray.append(contentsOf: displayDictionary.keys)
+            sourceArray.sort { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+            displayArray.append(contentsOf: sourceArray)
             tableView.reloadData()
         }
     }
 
-    private func pathInTestBundle(forFileWithName name: String) -> String? {
-        let bundle = NSBundle(forClass:object_getClass(self))
-        let safePath = bundle.pathForResource(name, ofType: plistExtension)
+    fileprivate func pathInTestBundle(forFileWithName name: String) -> String? {
+        let bundle = Bundle(for:object_getClass(self))
+        let safePath = bundle.path(forResource: name, ofType: plistExtension)
         return safePath
     }
 }
