@@ -26,8 +26,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         readPlistToDictionary(russianSerbianPlist)
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = tableViewCellHeight
+        setupTableView()
     }
 }
 
@@ -50,10 +49,6 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView()
-    }
-
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableViewHeaderHeight
     }
@@ -85,6 +80,12 @@ extension MainViewController: UISearchBarDelegate {
 
 extension MainViewController {
     // MARK: Utils
+
+    fileprivate func setupTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = tableViewCellHeight
+    }
+
     fileprivate func readPlistToDictionary(_ plistType: String) -> Void {
         if let path = pathInTestBundle(forFileWithName: plistType) {
             displayDictionary = NSDictionary(contentsOfFile: path) as! [String: String]
