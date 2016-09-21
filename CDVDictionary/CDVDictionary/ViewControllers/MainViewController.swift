@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
 
     fileprivate var sourceArray = [String]()
     fileprivate var displayArray = [String]()
@@ -22,11 +23,20 @@ class MainViewController: UIViewController {
     fileprivate let tableViewNumberOfSections: Int = 1
     fileprivate let tableViewCellHeight: CGFloat = 50.0
     fileprivate let tableViewHeaderHeight: CGFloat = 0.01
+    fileprivate let animationDuration: TimeInterval = 0.3
 
     override func viewDidLoad() {
         super.viewDidLoad()
         readPlistToDictionary(russianSerbianPlist)
         setupTableView()
+
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -50,6 +60,10 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return tableViewHeaderHeight
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return tableViewHeaderHeight
     }
 }
@@ -80,10 +94,24 @@ extension MainViewController: UISearchBarDelegate {
 
 extension MainViewController {
     // MARK: Utils
-
     fileprivate func setupTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = tableViewCellHeight
+    }
+
+    @objc fileprivate func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: animationDuration) {
+            self.tableViewBottomConstraint.constant = 0
+        }
+    }
+
+    @objc fileprivate func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        UIView.animate(withDuration: animationDuration) {
+            self.tableViewBottomConstraint.constant = keyboardSize.height
+        }
     }
 
     fileprivate func readPlistToDictionary(_ plistType: String) -> Void {
