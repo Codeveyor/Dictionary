@@ -10,6 +10,8 @@
 		2FAFCF0A03D2BD445883B9C9 /* Pods_CDVDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303ACA160560E22FBE7BCADD /* Pods_CDVDictionaryTests.framework */; };
 		B6E089588FDE76C725E16EED /* Pods_CDVDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA8CE917380E42B3938E1E8 /* Pods_CDVDictionary.framework */; };
 		E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */; };
+		E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */; };
+		E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE61D932D2700A5C632 /* MainViewController.swift */; };
 		E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7521C231A9600F705D0 /* AppDelegate.swift */; };
 		E5C2D7581C231A9600F705D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D7561C231A9600F705D0 /* Main.storyboard */; };
 		E5C2D75A1C231A9600F705D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D7591C231A9600F705D0 /* Assets.xcassets */; };
@@ -18,7 +20,6 @@
 		E5F921711D675BB3007F6524 /* russianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F9216F1D675BB3007F6524 /* russianAlphabet.plist */; };
 		E5F921721D675BB3007F6524 /* serbianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F921701D675BB3007F6524 /* serbianAlphabet.plist */; };
 		E5F921751D675F50007F6524 /* DictionaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F921741D675F50007F6524 /* DictionaryCell.swift */; };
-		E5F921781D675FC5007F6524 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F921771D675FC5007F6524 /* MainViewController.swift */; };
 		E5F9217B1D676C4D007F6524 /* DICT_R-S.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F921791D676C4D007F6524 /* DICT_R-S.plist */; };
 		E5F9217C1D676C4D007F6524 /* DICT_S-R.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F9217A1D676C4D007F6524 /* DICT_S-R.plist */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,8 @@
 		E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryUITests.swift; sourceTree = "<group>"; };
 		E5249A211C600C1900BE9846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		E59D0BE61D932D2700A5C632 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E5C2D74F1C231A9600F705D0 /* CDVDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDVDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C2D7521C231A9600F705D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C2D7571C231A9600F705D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		E5F9216F1D675BB3007F6524 /* russianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = russianAlphabet.plist; sourceTree = "<group>"; };
 		E5F921701D675BB3007F6524 /* serbianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serbianAlphabet.plist; sourceTree = "<group>"; };
 		E5F921741D675F50007F6524 /* DictionaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryCell.swift; sourceTree = "<group>"; };
-		E5F921771D675FC5007F6524 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E5F921791D676C4D007F6524 /* DICT_R-S.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DICT_R-S.plist"; sourceTree = "<group>"; };
 		E5F9217A1D676C4D007F6524 /* DICT_S-R.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DICT_S-R.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,7 +193,8 @@
 		E5F921761D675F93007F6524 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5F921771D675FC5007F6524 /* MainViewController.swift */,
+				E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */,
+				E59D0BE61D932D2700A5C632 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -442,9 +445,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F921781D675FC5007F6524 /* MainViewController.swift in Sources */,
+				E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */,
 				E5F921751D675F50007F6524 /* DictionaryCell.swift in Sources */,
 				E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */,
+				E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
