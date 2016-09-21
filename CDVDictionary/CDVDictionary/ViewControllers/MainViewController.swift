@@ -67,15 +67,13 @@ extension MainViewController: UISearchBarDelegate {
         if searchText.characters.count == 0 {
             displayArray.append(contentsOf: sourceArray)
         } else {
-            //            let predicate = NSPredicate(format: "SELF == %@", searchText)
-            //            let searchResults = displayArray.filter({ (predicate) -> Bool in
-            for key: String in sourceArray {
-                let word = key as String
-                if word.range(of: key) != nil {
+            for word in sourceArray {
+                if word.range(of: searchText, options: NSString.CompareOptions.caseInsensitive) != nil {
                     displayArray.append(word)
                 }
             }
         }
+        tableView.reloadData()
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
