@@ -25,7 +25,9 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.readPlistToDictionary(russianSerbianPlist)
+        readPlistToDictionary(russianSerbianPlist)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = tableViewCellHeight
     }
 }
 
@@ -40,7 +42,7 @@ extension MainViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! DictionaryCell
-        let word = displayArray[(indexPath as NSIndexPath).row]
+        let word = displayArray[indexPath.row]
         cell.wordLabel?.text = word
         cell.translationLabel?.text = displayDictionary[word]
         return cell
@@ -48,12 +50,8 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableViewCellHeight
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

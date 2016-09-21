@@ -46,9 +46,9 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I07-zq-3KE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I07-zq-3KE">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="nWo-vt-CTs"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="nWo-vt-CTs"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,6 +57,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ESJ-Fc-vga" secondAttribute="trailing" constant="12" id="5qD-53-urH"/>
+                                                <constraint firstAttribute="bottom" secondItem="I07-zq-3KE" secondAttribute="bottom" constant="2.5" id="BEm-kG-Ej8"/>
                                                 <constraint firstItem="ESJ-Fc-vga" firstAttribute="top" secondItem="as7-mP-a0E" secondAttribute="topMargin" constant="-2" id="JgP-Iq-LvB"/>
                                                 <constraint firstItem="I07-zq-3KE" firstAttribute="top" secondItem="ESJ-Fc-vga" secondAttribute="bottom" id="VhB-t3-zC3"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="I07-zq-3KE" secondAttribute="trailing" constant="12" id="Xat-dT-cyo"/>
