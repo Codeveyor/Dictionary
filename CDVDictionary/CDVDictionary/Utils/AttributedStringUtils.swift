@@ -9,12 +9,14 @@
 import UIKit
 
 struct AttributedStringUtils {
-    func createAttributedString(fullString: String, fullStringColor: UIColor, subString: String, subStringColor: UIColor) -> NSMutableAttributedString
+    let diminishedAlphaComponent: CGFloat = 0.6
+    func createAttributedString(fullString: String, subString: String) -> NSMutableAttributedString
     {
         let attributedString = NSMutableAttributedString(string: fullString)
         let str = NSString(string: fullString)
         let theRange = str.range(of: subString, options: NSString.CompareOptions.caseInsensitive)
-        attributedString.addAttribute(NSBackgroundColorAttributeName, value: UIColor.yellow, range: theRange)
+        let yellowColor = Colors().yellowColor().withAlphaComponent(diminishedAlphaComponent)
+        attributedString.addAttribute(NSBackgroundColorAttributeName, value: yellowColor, range: theRange)
         return attributedString
     }
 }

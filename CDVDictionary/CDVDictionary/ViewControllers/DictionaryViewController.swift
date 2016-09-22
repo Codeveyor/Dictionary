@@ -57,7 +57,7 @@ extension DictionaryViewController: UITableViewDataSource {
         let word = displayArray[indexPath.row]
         cell.wordLabel?.text = word
         cell.translationLabel?.text = displayDictionary[word]
-        setupAttributedString(cell: cell, fullString: word, fullStringColor: UIColor.red, subStringColor: UIColor.green)
+        setupAttributedString(cell: cell, fullString: word)
         return cell
     }
 }
@@ -103,10 +103,10 @@ extension DictionaryViewController {
         tableView.estimatedRowHeight = tableViewCellHeight
     }
 
-    fileprivate func setupAttributedString(cell: DictionaryCell, fullString: String, fullStringColor: UIColor, subStringColor: UIColor) {
+    fileprivate func setupAttributedString(cell: DictionaryCell, fullString: String) {
         if searchBar.text!.characters.count > 0 {
             if let searchText = searchBar.text {
-                let attributedString = attributedStringUtils.createAttributedString(fullString: fullString, fullStringColor: UIColor.red, subString: searchText, subStringColor: UIColor.green)
+                let attributedString = attributedStringUtils.createAttributedString(fullString: fullString, subString: searchText)
                 cell.wordLabel.attributedText = attributedString
             }
         }

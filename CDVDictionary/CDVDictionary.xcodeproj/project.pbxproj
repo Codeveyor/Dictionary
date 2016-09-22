@@ -10,6 +10,7 @@
 		2FAFCF0A03D2BD445883B9C9 /* Pods_CDVDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303ACA160560E22FBE7BCADD /* Pods_CDVDictionaryTests.framework */; };
 		B6E089588FDE76C725E16EED /* Pods_CDVDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA8CE917380E42B3938E1E8 /* Pods_CDVDictionary.framework */; };
 		E509DE8E1D9475BB001C6090 /* AttributedStringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */; };
+		E509DE901D94787E001C6090 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8F1D94787E001C6090 /* ColorUtils.swift */; };
 		E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */; };
 		E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */; };
 		E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE61D932D2700A5C632 /* MainViewController.swift */; };
@@ -50,6 +51,7 @@
 		B19F1B40CE5D174926FADD12 /* Pods-CDVDictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionaryTests/Pods-CDVDictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2BA60C787F2CB8DE6D1A5B9 /* Pods-CDVDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionaryTests/Pods-CDVDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringUtils.swift; sourceTree = "<group>"; };
+		E509DE8F1D94787E001C6090 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryUITests.swift; sourceTree = "<group>"; };
 		E5249A211C600C1900BE9846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */,
+				E509DE8F1D94787E001C6090 /* ColorUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */,
 				E5F921751D675F50007F6524 /* DictionaryCell.swift in Sources */,
 				E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */,
+				E509DE901D94787E001C6090 /* ColorUtils.swift in Sources */,
 				E509DE8E1D9475BB001C6090 /* AttributedStringUtils.swift in Sources */,
 				E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */,
 			);
