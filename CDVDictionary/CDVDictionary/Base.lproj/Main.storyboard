@@ -19,14 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ra3-WT-xhu">
-                                <connections>
-                                    <segue destination="CTO-D2-rLH" kind="embed" identifier="dictionarySegueIdentifier" id="N3i-vI-gao"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3Z-bJ-A1L">
                                 <connections>
                                     <segue destination="cra-7M-gm2" kind="embed" identifier="infoSegueIdentifier" id="jQ5-21-KG7"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ra3-WT-xhu">
+                                <connections>
+                                    <segue destination="CTO-D2-rLH" kind="embed" identifier="dictionarySegueIdentifier" id="N3i-vI-gao"/>
                                 </connections>
                             </containerView>
                         </subviews>

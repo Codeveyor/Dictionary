@@ -24,6 +24,7 @@ class DictionaryViewController: UIViewController {
     fileprivate let tableViewCellHeight: CGFloat = 50.0
     fileprivate let tableViewHeaderHeight: CGFloat = 0.01
     fileprivate let animationDuration: TimeInterval = 0.3
+    fileprivate let attributedStringUtils = AttributedStringUtils()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ extension DictionaryViewController: UITableViewDataSource {
         let word = displayArray[indexPath.row]
         cell.wordLabel?.text = word
         cell.translationLabel?.text = displayDictionary[word]
+        setupAttributedString(cell: cell, fullString: word, fullStringColor: UIColor.red, subStringColor: UIColor.green)
         return cell
     }
 }
@@ -99,6 +101,15 @@ extension DictionaryViewController {
     fileprivate func setupTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = tableViewCellHeight
+    }
+
+    fileprivate func setupAttributedString(cell: DictionaryCell, fullString: String, fullStringColor: UIColor, subStringColor: UIColor) {
+        if searchBar.text!.characters.count > 0 {
+            if let searchText = searchBar.text {
+                let attributedString = attributedStringUtils.createAttributedString(fullString: fullString, fullStringColor: UIColor.red, subString: searchText, subStringColor: UIColor.green)
+                cell.wordLabel.attributedText = attributedString
+            }
+        }
     }
 
     @objc fileprivate func keyboardWillHide(notification: NSNotification) {
