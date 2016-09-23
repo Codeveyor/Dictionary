@@ -14,6 +14,9 @@
 		E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */; };
 		E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */; };
 		E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE61D932D2700A5C632 /* MainViewController.swift */; };
+		E59F50A41D952FEA0056597A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F50A31D952FEA0056597A /* InfoViewController.swift */; };
+		E59F50A61D9531AE0056597A /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F50A51D9531AE0056597A /* InfoCell.swift */; };
+		E59F50A91D958C8E0056597A /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F50A81D958C8E0056597A /* RoundedView.swift */; };
 		E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7521C231A9600F705D0 /* AppDelegate.swift */; };
 		E5C2D7581C231A9600F705D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D7561C231A9600F705D0 /* Main.storyboard */; };
 		E5C2D75A1C231A9600F705D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D7591C231A9600F705D0 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		E5249A211C600C1900BE9846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		E59D0BE61D932D2700A5C632 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E59F50A31D952FEA0056597A /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		E59F50A51D9531AE0056597A /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		E59F50A81D958C8E0056597A /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		E5C2D74F1C231A9600F705D0 /* CDVDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDVDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C2D7521C231A9600F705D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C2D7571C231A9600F705D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +144,14 @@
 			path = CDVDictionaryUITests;
 			sourceTree = "<group>";
 		};
+		E59F50A71D958C620056597A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E59F50A81D958C8E0056597A /* RoundedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E5C2D7461C231A9600F705D0 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +182,7 @@
 				E5F9216E1D675B28007F6524 /* Resources */,
 				E509DE8C1D94741F001C6090 /* Utils */,
 				E5F921761D675F93007F6524 /* ViewControllers */,
+				E59F50A71D958C620056597A /* Views */,
 			);
 			path = CDVDictionary;
 			sourceTree = "<group>";
@@ -200,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				E5F921741D675F50007F6524 /* DictionaryCell.swift */,
+				E59F50A51D9531AE0056597A /* InfoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -208,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */,
+				E59F50A31D952FEA0056597A /* InfoViewController.swift */,
 				E59D0BE61D932D2700A5C632 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
@@ -461,8 +478,11 @@
 			files = (
 				E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */,
 				E5F921751D675F50007F6524 /* DictionaryCell.swift in Sources */,
+				E59F50A91D958C8E0056597A /* RoundedView.swift in Sources */,
 				E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */,
+				E59F50A41D952FEA0056597A /* InfoViewController.swift in Sources */,
 				E509DE901D94787E001C6090 /* ColorUtils.swift in Sources */,
+				E59F50A61D9531AE0056597A /* InfoCell.swift in Sources */,
 				E509DE8E1D9475BB001C6090 /* AttributedStringUtils.swift in Sources */,
 				E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */,
 			);
@@ -635,6 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96837XF4KD;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeveyor.CDVDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,6 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96837XF4KD;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeveyor.CDVDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";

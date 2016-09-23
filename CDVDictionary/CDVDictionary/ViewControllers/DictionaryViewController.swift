@@ -22,7 +22,7 @@ class DictionaryViewController: UIViewController {
     fileprivate let plistExtension = ".plist"
     fileprivate let tableViewNumberOfSections: Int = 1
     fileprivate let tableViewCellHeight: CGFloat = 50.0
-    fileprivate let tableViewHeaderHeight: CGFloat = 0.01
+    fileprivate let tableViewHeaderFooterHeight: CGFloat = 0.01
     fileprivate let animationDuration: TimeInterval = 0.3
     fileprivate let attributedStringUtils = AttributedStringUtils()
 
@@ -64,11 +64,11 @@ extension DictionaryViewController: UITableViewDataSource {
 
 extension DictionaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableViewHeaderHeight
+        return tableViewHeaderFooterHeight
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return tableViewHeaderHeight
+        return tableViewHeaderFooterHeight
     }
 }
 

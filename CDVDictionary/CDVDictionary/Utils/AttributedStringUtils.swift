@@ -9,7 +9,7 @@
 import UIKit
 
 struct AttributedStringUtils {
-    let diminishedAlphaComponent: CGFloat = 0.6
+    let diminishedAlphaComponent: CGFloat = 0.8
     func createAttributedString(fullString: String, subString: String) -> NSMutableAttributedString
     {
         let attributedString = NSMutableAttributedString(string: fullString)

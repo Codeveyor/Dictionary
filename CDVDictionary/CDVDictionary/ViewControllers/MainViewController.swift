@@ -36,20 +36,30 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
     @IBAction func segmentedControlDidChanged(segmentedControl: UISegmentedControl) {
-        var segueIdentifier: String!
+        view.endEditing(true)
         switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            segueIdentifier = dictionarySegueIdentifier
-            selectedPlist = russianSerbianPlist
-        case 1:
-            segueIdentifier = dictionarySegueIdentifier
-            selectedPlist = serbianRussianPlist
+        case 0, 1:
+            highlight(containerView: dictionaryContainerView)
         case 2:
-            segueIdentifier = infoSegueIdentifier
+            highlight(containerView: infoContainerView)
         default:
             break
         }
-        performSegue(withIdentifier: segueIdentifier, sender: self)
+    }
+
+    func highlight(containerView: UIView) {
+        let containersArray = [dictionaryContainerView, infoContainerView]
+        for container in containersArray {
+            if container == containerView {
+                UIView.animate(withDuration: 0.3, animations: { 
+                    container?.alpha = 1.0
+                })
+            } else {
+                UIView.animate(withDuration: 0.3, animations: {
+                    container?.alpha = 0.0
+                })
+            }
+        }
     }
 }
 
