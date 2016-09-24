@@ -54,13 +54,34 @@ extension InfoViewController: UITableViewDelegate {
     }
 }
 
+extension InfoViewController {
+    @IBAction func facebookButtonDidPressed(button: UIButton) {
+        showSheet(serviceType: SLServiceTypeFacebook)
+    }
+
+    @IBAction func twitterButtonDidPressed(button: UIButton) {
+        showSheet(serviceType: SLServiceTypeTwitter)
+    }
+
+    //MARK: Utils
+
+    fileprivate func showSheet(serviceType: String) {
+        if let sheet = SocialShareFactory().shareSheet(for: serviceType) {
+            present(sheet, animated: true)
+        } else {
+            let alertController = UIAlertController(title: "Ошибка", message: "Аккаунт не настроен в Настройках устройства", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel) { (action) in })
+            present(alertController, animated: true)
+        }
+    }
+}
+
 import Social
 
-private struct SocialShare {
+private struct SocialShareFactory {
     func shareSheet(for serviceType: String) -> SLComposeViewController? {
-
         if let composeController = SLComposeViewController(forServiceType: serviceType) {
-            composeController.view.tintColor = UIColor.white
+            composeController.view.tintColor = Colors().yellowColor()
             let completionHandler: SLComposeViewControllerCompletionHandler = { result in
                 if result == SLComposeViewControllerResult.cancelled {
                     print("Cancelled")
@@ -73,7 +94,6 @@ private struct SocialShare {
             composeController.setInitialText("Русско-сербский словарь для iOS - Балкания")
             composeController.add(UIImage(named: "preview")!)
             composeController.add(URL(string: "http://codeveyor.com"))
-
             return composeController
         } else {
             return nil

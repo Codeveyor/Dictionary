@@ -114,10 +114,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mainTableCellIdentifier" rowHeight="55" id="Odp-oo-cyE" customClass="DictionaryCell" customModule="CDVDictionary">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="56" width="1000" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Odp-oo-cyE" id="u9j-Mv-mi2">
-                                            <frame key="frameInset" width="375" height="54"/>
+                                            <frame key="frameInset" width="1000" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-Sx-9Be">
@@ -207,7 +207,7 @@
                                         <rect key="frame" x="0.0" y="28" width="335" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xcc-cn-bp9" id="eIL-4A-fbi">
-                                            <frame key="frameInset" width="335" height="59"/>
+                                            <frame key="frameInset" width="335" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FC5-cf-5DI" customClass="RoundedView" customModule="CDVDictionary" customModuleProvider="target">
@@ -269,6 +269,9 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="3" height="9"/>
                                 <state key="normal" image="facebook"/>
+                                <connections>
+                                    <action selector="facebookButtonDidPressedWithButton:" destination="cra-7M-gm2" eventType="touchUpInside" id="LPK-tj-0ds"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BW3-nK-y5L">
                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -276,6 +279,9 @@
                                     <constraint firstAttribute="height" constant="60" id="NfC-qj-eH7"/>
                                 </constraints>
                                 <state key="normal" image="twitter"/>
+                                <connections>
+                                    <action selector="twitterButtonDidPressedWithButton:" destination="cra-7M-gm2" eventType="touchUpInside" id="nVp-m5-XMZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
