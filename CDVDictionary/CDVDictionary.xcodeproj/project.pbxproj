@@ -12,6 +12,7 @@
 		E509DE8E1D9475BB001C6090 /* AttributedStringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */; };
 		E509DE901D94787E001C6090 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8F1D94787E001C6090 /* ColorUtils.swift */; };
 		E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */; };
+		E591C2BC1D96F90E001074CE /* ResizedTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */; };
 		E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */; };
 		E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE61D932D2700A5C632 /* MainViewController.swift */; };
 		E59F50A41D952FEA0056597A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F50A31D952FEA0056597A /* InfoViewController.swift */; };
@@ -58,6 +59,7 @@
 		E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryUITests.swift; sourceTree = "<group>"; };
 		E5249A211C600C1900BE9846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizedTextViewController.swift; sourceTree = "<group>"; };
 		E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		E59D0BE61D932D2700A5C632 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E59F50A31D952FEA0056597A /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */,
 				E59F50A31D952FEA0056597A /* InfoViewController.swift */,
 				E59D0BE61D932D2700A5C632 /* MainViewController.swift */,
+				E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E591C2BC1D96F90E001074CE /* ResizedTextViewController.swift in Sources */,
 				E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */,
 				E5F921751D675F50007F6524 /* DictionaryCell.swift in Sources */,
 				E59F50A91D958C8E0056597A /* RoundedView.swift in Sources */,

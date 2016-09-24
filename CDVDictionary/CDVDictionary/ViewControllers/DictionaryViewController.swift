@@ -10,7 +10,7 @@ import UIKit
 
 class DictionaryViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dictionaryTableView: UITableView!
     @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
 
     var dictionaryType: String!
@@ -18,7 +18,7 @@ class DictionaryViewController: UIViewController {
     fileprivate var sourceArray = [String]()
     fileprivate var displayArray = [String]()
     fileprivate var displayDictionary: Dictionary = [String: String]()
-    fileprivate let textCellIdentifier = "mainTableCellIdentifier"
+    fileprivate let textCellIdentifier = "dictionaryTableCell"
     fileprivate let plistExtension = ".plist"
     fileprivate let tableViewNumberOfSections: Int = 1
     fileprivate let tableViewCellHeight: CGFloat = 50.0
@@ -84,7 +84,7 @@ extension DictionaryViewController: UISearchBarDelegate {
                 }
             }
         }
-        tableView.reloadData()
+        dictionaryTableView.reloadData()
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -99,8 +99,8 @@ extension DictionaryViewController: UISearchBarDelegate {
 extension DictionaryViewController {
     // MARK: Utils
     fileprivate func setupTableView() {
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = tableViewCellHeight
+        dictionaryTableView.rowHeight = UITableViewAutomaticDimension
+        dictionaryTableView.estimatedRowHeight = tableViewCellHeight
     }
 
     fileprivate func setupAttributedString(cell: DictionaryCell, fullString: String) {
@@ -133,7 +133,7 @@ extension DictionaryViewController {
             sourceArray.append(contentsOf: displayDictionary.keys)
             sourceArray.sort { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
             displayArray.append(contentsOf: sourceArray)
-            tableView.reloadData()
+            dictionaryTableView.reloadData()
         }
     }
 

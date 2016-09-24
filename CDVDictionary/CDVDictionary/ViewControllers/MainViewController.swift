@@ -17,8 +17,8 @@ class MainViewController: UIViewController {
     fileprivate var savedSelectedPlist = "savedSelectedPlist"
     fileprivate let russianSerbianPlist = "DICT_R-S"
     fileprivate let serbianRussianPlist = "DICT_S-R"
-    fileprivate let dictionarySegueIdentifier = "dictionarySegueIdentifier"
-    fileprivate let infoSegueIdentifier = "infoSegueIdentifier"
+    fileprivate let dictionarySegueIdentifier = "dictionarySegue"
+    fileprivate let infoSegueIdentifier = "infoSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
