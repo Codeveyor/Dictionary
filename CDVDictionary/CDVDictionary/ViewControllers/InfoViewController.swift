@@ -53,3 +53,30 @@ extension InfoViewController: UITableViewDelegate {
         return tableViewHeaderFooterHeight
     }
 }
+
+import Social
+
+private struct SocialShare {
+    func shareSheet(for serviceType: String) -> SLComposeViewController? {
+
+        if let composeController = SLComposeViewController(forServiceType: serviceType) {
+            composeController.view.tintColor = UIColor.white
+            let completionHandler: SLComposeViewControllerCompletionHandler = { result in
+                if result == SLComposeViewControllerResult.cancelled {
+                    print("Cancelled")
+                } else {
+                    print("Done")
+                }
+                composeController.dismiss(animated: true, completion: nil)
+            }
+            composeController.completionHandler = completionHandler
+            composeController.setInitialText("Русско-сербский словарь для iOS - Балкания")
+            composeController.add(UIImage(named: "preview")!)
+            composeController.add(URL(string: "http://codeveyor.com"))
+
+            return composeController
+        } else {
+            return nil
+        }
+    }
+}
