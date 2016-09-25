@@ -10,9 +10,9 @@ import UIKit
 
 class InfoViewController: UIViewController {
     @IBOutlet weak var infoTableView: UITableView!
-    fileprivate let tableViewNumberOfSections = 1
-    fileprivate let tableViewHeaderFooterHeight: CGFloat = 0.01
-    fileprivate let tableViewRowHeight: CGFloat = 60.0
+    fileprivate let infoTableViewNumberOfSections = 1
+    fileprivate let infoTableViewHeaderFooterHeight: CGFloat = 0.01
+    fileprivate let infoTableViewRowHeight: CGFloat = 60.0
     fileprivate let infoCellIdentifier = "infoCell"
     fileprivate let textSegueIdentifier = "textSegue"
     fileprivate let webSegueIdentifier = "webSegue"
@@ -42,7 +42,7 @@ class InfoViewController: UIViewController {
 
 extension InfoViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewNumberOfSections
+        return infoTableViewNumberOfSections
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,15 +77,15 @@ extension InfoViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableViewRowHeight
+        return infoTableViewRowHeight
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableViewHeaderFooterHeight
+        return infoTableViewHeaderFooterHeight
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return tableViewHeaderFooterHeight
+        return infoTableViewHeaderFooterHeight
     }
 }
 

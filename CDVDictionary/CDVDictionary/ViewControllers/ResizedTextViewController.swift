@@ -12,10 +12,10 @@ class ResizedTextViewController: UIViewController {
     @IBOutlet weak var textTableView: UITableView!
     var navigationTitle: String!
     var text: String!
-    fileprivate let tableViewNumberOfSections = 1
-    fileprivate let tableViewNumberOfRows = 1
-    fileprivate let tableViewHeaderFooterHeight: CGFloat = 0.01
-    fileprivate let tableViewCellHeight: CGFloat = 60.0
+    fileprivate let textTableViewNumberOfSections = 1
+    fileprivate let textTableViewNumberOfRows = 1
+    fileprivate let textTableViewHeaderFooterHeight: CGFloat = 0.01
+    fileprivate let textTableViewCellHeight: CGFloat = 60.0
     fileprivate let textCellIdentifier = "textCell"
 
     override func viewDidLoad() {
@@ -27,11 +27,11 @@ class ResizedTextViewController: UIViewController {
 
 extension ResizedTextViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewNumberOfSections
+        return textTableViewNumberOfSections
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewNumberOfRows
+        return textTableViewNumberOfRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,11 +43,11 @@ extension ResizedTextViewController: UITableViewDataSource {
 
 extension ResizedTextViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableViewHeaderFooterHeight
+        return textTableViewHeaderFooterHeight
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return tableViewHeaderFooterHeight
+        return textTableViewHeaderFooterHeight
     }
 }
 
@@ -55,7 +55,7 @@ extension ResizedTextViewController {
     // MARK: Utils
     fileprivate func setupTableView() {
         textTableView.rowHeight = UITableViewAutomaticDimension
-        textTableView.estimatedRowHeight = tableViewCellHeight
+        textTableView.estimatedRowHeight = textTableViewCellHeight
     }
 
     fileprivate func setupNavigationBar() {
