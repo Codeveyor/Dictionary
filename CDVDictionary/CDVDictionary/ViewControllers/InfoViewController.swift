@@ -31,9 +31,10 @@ class InfoViewController: UIViewController {
         if segue.identifier == alphabetSegueIdentifier {
             let alphabetViewController = segue.destination as! AlphabetViewController
             alphabetViewController.dictionaryName = selectedPlist
+            alphabetViewController.navigationTitle = selectedTuple.title
         } else if segue.identifier == textSegueIdentifier {
             let textViewController = segue.destination as! ResizedTextViewController
-            textViewController.title = selectedTuple.title
+            textViewController.navigationTitle = selectedTuple.title
             textViewController.text = selectedTuple.text
         }
     }
@@ -66,9 +67,7 @@ extension InfoViewController: UITableViewDelegate {
         case 1:
             selectedPlist = "russianAlphabet"
             performSegue(withIdentifier: alphabetSegueIdentifier, sender: self)
-        case 2:
-            performSegue(withIdentifier: textSegueIdentifier, sender: self)
-        case 3:
+        case 2, 3:
             performSegue(withIdentifier: textSegueIdentifier, sender: self)
         case 4:
             performSegue(withIdentifier: webSegueIdentifier, sender: self)

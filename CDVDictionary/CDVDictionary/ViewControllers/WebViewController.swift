@@ -27,5 +27,6 @@ extension WebViewController {
 
     fileprivate func setupNavigationBar() {
         NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
+        title = "CODEVEYOR.COM"
     }
 }

@@ -20,8 +20,8 @@ class ResizedTextViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDataSource()
         setupTableView()
+        setupNavigationBar()
     }
 }
 
@@ -52,13 +52,14 @@ extension ResizedTextViewController: UITableViewDelegate {
 }
 
 extension ResizedTextViewController {
-    fileprivate func setupDataSource() {
-        title = navigationTitle
-        textTableView.reloadData()
-    }
-
+    // MARK: Utils
     fileprivate func setupTableView() {
         textTableView.rowHeight = UITableViewAutomaticDimension
         textTableView.estimatedRowHeight = tableViewCellHeight
+    }
+
+    fileprivate func setupNavigationBar() {
+        NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
+        title = navigationTitle
     }
 }

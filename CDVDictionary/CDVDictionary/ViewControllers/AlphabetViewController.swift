@@ -11,6 +11,7 @@ import UIKit
 class AlphabetViewController: UIViewController {
     @IBOutlet weak var alphabetTableView: UITableView!
 
+    var navigationTitle: String!
     var dictionaryName: String!
     fileprivate var sourceArray = [String]()
     fileprivate var displayDictionary: Dictionary = [String: String]()
@@ -18,6 +19,7 @@ class AlphabetViewController: UIViewController {
     fileprivate let alphabetTableViewCellHeight: CGFloat = 56.0
     fileprivate let alphabetTableViewHeaderFooterHeight: CGFloat = 0.01
     fileprivate let alphabetCellIdentifier = "alphabetCell"
+    fileprivate let colors = Colors()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,11 @@ extension AlphabetViewController: UITableViewDataSource {
         let letter = sourceArray[indexPath.row]
         cell.wordLabel?.text = letter
         cell.translationLabel?.text = displayDictionary[letter]
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = colors.cellYellowColor()
+        } else {
+            cell.backgroundColor = colors.cellWhiteColor()
+        }
         return cell
     }
 }
@@ -73,5 +80,6 @@ extension AlphabetViewController {
 
     fileprivate func setupNavigationBar() {
         NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
+        title = navigationTitle
     }
 }

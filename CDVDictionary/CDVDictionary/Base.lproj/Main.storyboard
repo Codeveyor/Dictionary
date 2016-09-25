@@ -401,8 +401,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_map" translatesAutoresizingMaskIntoConstraints="NO" id="B5y-dk-H91"/>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="WEi-J1-Ltr">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="textCell" rowHeight="60" id="m62-c1-tUh" customClass="InfoCell" customModule="CDVDictionary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="375" height="60"/>
@@ -441,9 +442,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WEi-J1-Ltr" secondAttribute="trailing" id="AmQ-Db-eXJ"/>
+                            <constraint firstItem="B5y-dk-H91" firstAttribute="leading" secondItem="8Yl-up-BhY" secondAttribute="leading" id="IYf-NV-DeF"/>
+                            <constraint firstItem="x00-EF-JZ0" firstAttribute="top" secondItem="B5y-dk-H91" secondAttribute="bottom" id="RY2-c9-t4T"/>
                             <constraint firstItem="WEi-J1-Ltr" firstAttribute="leading" secondItem="8Yl-up-BhY" secondAttribute="leading" id="W8o-07-A8Y"/>
-                            <constraint firstItem="WEi-J1-Ltr" firstAttribute="top" secondItem="oJO-31-FKs" secondAttribute="bottom" constant="-64" id="ZDH-Sz-oEh"/>
+                            <constraint firstItem="WEi-J1-Ltr" firstAttribute="top" secondItem="oJO-31-FKs" secondAttribute="bottom" id="ZDH-Sz-oEh"/>
                             <constraint firstItem="x00-EF-JZ0" firstAttribute="top" secondItem="WEi-J1-Ltr" secondAttribute="bottom" id="Zhr-WI-lbg"/>
+                            <constraint firstItem="B5y-dk-H91" firstAttribute="top" secondItem="8Yl-up-BhY" secondAttribute="top" constant="-64" id="gUF-8L-gQe"/>
+                            <constraint firstAttribute="trailing" secondItem="B5y-dk-H91" secondAttribute="trailing" id="jWQ-WG-fcu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -452,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVm-Y4-Rq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3049" y="647"/>
+            <point key="canvasLocation" x="3048.8000000000002" y="646.32683658170924"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="de0-Sd-OnM">

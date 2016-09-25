@@ -17,6 +17,14 @@ struct Colors {
         return color(r: 51.0, g: 51.0, b: 51.0)
     }
 
+    func cellYellowColor() -> UIColor {
+        return yellowColor().withAlphaComponent(0.8)
+    }
+
+    func cellWhiteColor() -> UIColor {
+        return UIColor.white
+    }
+
     fileprivate func color(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
         return UIColor.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
     }
