@@ -16,9 +16,11 @@ class InfoViewController: UIViewController {
     fileprivate let infoCellIdentifier = "infoCell"
     fileprivate let textSegueIdentifier = "textSegue"
     fileprivate let webSegueIdentifier = "webSegue"
+    fileprivate let alphabetSegueIdentifier = "alphabetSegue"
     fileprivate typealias StringTuple = (title: String, text: String)
     fileprivate var sourceArray = [StringTuple]()
     fileprivate var selectedTuple: StringTuple!
+    fileprivate var selectedPlist: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,10 @@ class InfoViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == textSegueIdentifier {
+        if segue.identifier == alphabetSegueIdentifier {
+            let alphabetViewController = segue.destination as! AlphabetViewController
+            alphabetViewController.dictionaryName = selectedPlist
+        } else if segue.identifier == textSegueIdentifier {
             let textViewController = segue.destination as! ResizedTextViewController
             textViewController.title = selectedTuple.title
             textViewController.text = selectedTuple.text
@@ -54,7 +59,22 @@ extension InfoViewController: UITableViewDataSource {
 extension InfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedTuple = sourceArray[indexPath.row]
-        performSegue(withIdentifier: webSegueIdentifier, sender: self)
+        switch indexPath.row {
+        case 0:
+            selectedPlist = "serbianAlphabet"
+            performSegue(withIdentifier: alphabetSegueIdentifier, sender: self)
+        case 1:
+            selectedPlist = "russianAlphabet"
+            performSegue(withIdentifier: alphabetSegueIdentifier, sender: self)
+        case 2:
+            performSegue(withIdentifier: textSegueIdentifier, sender: self)
+        case 3:
+            performSegue(withIdentifier: textSegueIdentifier, sender: self)
+        case 4:
+            performSegue(withIdentifier: webSegueIdentifier, sender: self)
+        default:
+            break
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -81,7 +101,6 @@ extension InfoViewController {
 }
 
 extension InfoViewController {
-
     fileprivate func setupDataSource() {
         sourceArray = [StringTuple("Srpski Abeceda", ""),
                        StringTuple("Русский алфавит", ""),

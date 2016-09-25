@@ -16,16 +16,16 @@ class WebViewController: UIViewController {
         setupURL()
         setupNavigationBar()
     }
+}
 
+extension WebViewController {
     //MARK: Utils
-
     fileprivate func setupURL() {
         let url = URL(string:"http://codeveyor.com")
         webView.loadRequest(URLRequest(url: url!))
     }
 
     fileprivate func setupNavigationBar() {
-        navigationController?.navigationBar.tintColor = Colors().yellowColor()
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title:"", style: .plain, target:nil, action:nil)
+        NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
     }
 }

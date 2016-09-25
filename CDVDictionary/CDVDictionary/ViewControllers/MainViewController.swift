@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         setupPlistType()
         if segue.identifier == dictionarySegueIdentifier {
             let dictionaryViewController =  segue.destination as! DictionaryViewController
-            dictionaryViewController.dictionaryType = selectedPlist
+            dictionaryViewController.dictionaryName = selectedPlist
         }
     }
 }
