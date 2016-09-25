@@ -15,6 +15,7 @@ class InfoViewController: UIViewController {
     fileprivate let tableViewRowHeight: CGFloat = 60.0
     fileprivate let infoCellIdentifier = "infoCell"
     fileprivate let textSegueIdentifier = "textSegue"
+    fileprivate let webSegueIdentifier = "webSegue"
     fileprivate typealias StringTuple = (title: String, text: String)
     fileprivate var sourceArray = [StringTuple]()
     fileprivate var selectedTuple: StringTuple!
@@ -53,7 +54,7 @@ extension InfoViewController: UITableViewDataSource {
 extension InfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedTuple = sourceArray[indexPath.row]
-        performSegue(withIdentifier: textSegueIdentifier, sender: self)
+        performSegue(withIdentifier: webSegueIdentifier, sender: self)
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,6 +81,7 @@ extension InfoViewController {
 }
 
 extension InfoViewController {
+
     fileprivate func setupDataSource() {
         sourceArray = [StringTuple("Srpski Abeceda", ""),
                        StringTuple("Русский алфавит", ""),
