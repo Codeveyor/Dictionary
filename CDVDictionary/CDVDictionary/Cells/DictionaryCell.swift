@@ -11,4 +11,5 @@ import UIKit
 class DictionaryCell: UITableViewCell {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var translationLabel: UILabel!
+    @IBOutlet weak var colorView: UIView!
 }

@@ -53,7 +53,7 @@ extension MainViewController {
         }
     }
 
-    func highlight(containerView: UIView) {
+    fileprivate func highlight(containerView: UIView) {
         let containersArray = [rsContainerView, srContainerView, infoContainerView]
         for container in containersArray {
             if container == containerView {
