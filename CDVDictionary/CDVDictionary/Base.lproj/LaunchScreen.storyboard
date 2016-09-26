@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,14 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preview" translatesAutoresizingMaskIntoConstraints="NO" id="tOC-lE-L3K"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preview" translatesAutoresizingMaskIntoConstraints="NO" id="g77-2s-ICN"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provided to you by Codeveyor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-kC-cof">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wmE-o4-IcK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="tOC-lE-L3K" secondAttribute="bottom" id="7uS-TB-1QM"/>
-                            <constraint firstItem="tOC-lE-L3K" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="NOs-F0-d7y"/>
-                            <constraint firstItem="tOC-lE-L3K" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="jzA-t8-pte"/>
-                            <constraint firstAttribute="trailing" secondItem="tOC-lE-L3K" secondAttribute="trailing" id="mVe-z4-2TI"/>
+                            <constraint firstItem="g77-2s-ICN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="0G2-2F-ZNF"/>
+                            <constraint firstItem="g77-2s-ICN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Qsc-Ev-dMe"/>
+                            <constraint firstAttribute="trailing" secondItem="g77-2s-ICN" secondAttribute="trailing" id="S1S-hu-XU6"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="AS4-kC-cof" secondAttribute="bottom" constant="45" id="Um3-jg-SZJ"/>
+                            <constraint firstItem="AS4-kC-cof" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="abu-9R-avN"/>
+                            <constraint firstAttribute="trailing" secondItem="AS4-kC-cof" secondAttribute="trailing" constant="16" id="fqe-Dt-w6E"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="g77-2s-ICN" secondAttribute="bottom" id="q0k-lS-ULI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="preview" width="250" height="250"/>
+        <image name="preview" width="384" height="512"/>
     </resources>
 </document>
