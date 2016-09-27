@@ -15,6 +15,10 @@
 		E525BA791D983A39007A3CED /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA781D983A39007A3CED /* AlphabetViewController.swift */; };
 		E525BA7B1D983DE1007A3CED /* PlistReaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */; };
 		E525BA7D1D984461007A3CED /* NavigationBarStyleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */; };
+		E57094001D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */; };
+		E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */; };
+		E57094041D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */; };
+		E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */; };
 		E591C2BC1D96F90E001074CE /* ResizedTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */; };
 		E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */; };
 		E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE61D932D2700A5C632 /* MainViewController.swift */; };
@@ -25,7 +29,6 @@
 		E5C2D7581C231A9600F705D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D7561C231A9600F705D0 /* Main.storyboard */; };
 		E5C2D75A1C231A9600F705D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D7591C231A9600F705D0 /* Assets.xcassets */; };
 		E5C2D75D1C231A9600F705D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C2D75B1C231A9600F705D0 /* LaunchScreen.storyboard */; };
-		E5C2D7681C231A9600F705D0 /* CDVDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2D7671C231A9600F705D0 /* CDVDictionaryTests.swift */; };
 		E5EA80F71D97E1F20067A782 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA80F61D97E1F20067A782 /* WebViewController.swift */; };
 		E5F921711D675BB3007F6524 /* russianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F9216F1D675BB3007F6524 /* russianAlphabet.plist */; };
 		E5F921721D675BB3007F6524 /* serbianAlphabet.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F921701D675BB3007F6524 /* serbianAlphabet.plist */; };
@@ -66,6 +69,10 @@
 		E525BA781D983A39007A3CED /* AlphabetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetViewController.swift; sourceTree = "<group>"; };
 		E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtils.swift; sourceTree = "<group>"; };
 		E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleUtils.swift; sourceTree = "<group>"; };
+		E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringUtilsTests.swift; sourceTree = "<group>"; };
+		E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtilsTests.swift; sourceTree = "<group>"; };
+		E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleUtilsTests.swift; sourceTree = "<group>"; };
+		E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtilsTests.swift; sourceTree = "<group>"; };
 		E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizedTextViewController.swift; sourceTree = "<group>"; };
 		E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		E59D0BE61D932D2700A5C632 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +86,6 @@
 		E5C2D75C1C231A9600F705D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5C2D75E1C231A9600F705D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		E5C2D7631C231A9600F705D0 /* CDVDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5C2D7671C231A9600F705D0 /* CDVDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryTests.swift; sourceTree = "<group>"; };
 		E5C2D7691C231A9600F705D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5EA80F61D97E1F20067A782 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E5F9216F1D675BB3007F6524 /* russianAlphabet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = russianAlphabet.plist; sourceTree = "<group>"; };
@@ -156,6 +162,38 @@
 			path = CDVDictionaryUITests;
 			sourceTree = "<group>";
 		};
+		E57093FB1D9AC36200B40FD3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E57093FE1D9ACBE400B40FD3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */,
+				E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */,
+				E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */,
+				E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E57094071D9AEF0C00B40FD3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E57094081D9AEF3200B40FD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E59F50A71D958C620056597A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +240,10 @@
 		E5C2D7661C231A9600F705D0 /* CDVDictionaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				E5C2D7671C231A9600F705D0 /* CDVDictionaryTests.swift */,
+				E57093FB1D9AC36200B40FD3 /* Cells */,
+				E57093FE1D9ACBE400B40FD3 /* Utils */,
+				E57094071D9AEF0C00B40FD3 /* ViewControllers */,
+				E57094081D9AEF3200B40FD3 /* Views */,
 				E5C2D7691C231A9600F705D0 /* Info.plist */,
 			);
 			path = CDVDictionaryTests;
@@ -512,7 +553,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5C2D7681C231A9600F705D0 /* CDVDictionaryTests.swift in Sources */,
+				E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */,
+				E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */,
+				E57094001D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift in Sources */,
+				E57094041D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +719,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96837XF4KD;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeveyor.CDVDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -691,7 +735,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96837XF4KD;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeveyor.CDVDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";

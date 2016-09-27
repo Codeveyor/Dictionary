@@ -19,7 +19,7 @@ class AlphabetViewController: UIViewController {
     fileprivate let alphabetTableViewCellHeight: CGFloat = 56.0
     fileprivate let alphabetTableViewHeaderFooterHeight: CGFloat = 0.01
     fileprivate let alphabetCellIdentifier = "alphabetCell"
-    fileprivate let colors = Colors()
+    fileprivate let colors = ColorUtils()
 
     override func viewDidLoad() {
         super.viewDidLoad()

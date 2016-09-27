@@ -8,17 +8,21 @@
 
 import UIKit
 
-struct Colors {
+struct ColorUtils {
     func yellowColor() -> UIColor {
         return color(r: 205.0, g: 150.0, b: 62.0)
     }
 
-    func blackColor() -> UIColor {
-        return color(r: 51.0, g: 51.0, b: 51.0)
-    }
-
     func cellYellowColor() -> UIColor {
         return yellowColor().withAlphaComponent(0.8)
+    }
+
+    func attributedYellowColor() -> UIColor {
+        return cellYellowColor()
+    }
+
+    func blackColor() -> UIColor {
+        return color(r: 51.0, g: 51.0, b: 51.0)
     }
 
     func cellWhiteColor() -> UIColor {

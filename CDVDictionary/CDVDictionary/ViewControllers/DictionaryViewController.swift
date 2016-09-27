@@ -24,7 +24,7 @@ class DictionaryViewController: UIViewController {
     fileprivate let dictionaryTableViewHeaderFooterHeight: CGFloat = 0.01
     fileprivate let animationDuration: TimeInterval = 0.3
     fileprivate let attributedStringUtils = AttributedStringUtils()
-    fileprivate let colors = Colors()
+    fileprivate let colors = ColorUtils()
 
     override func viewDidLoad() {
         super.viewDidLoad()

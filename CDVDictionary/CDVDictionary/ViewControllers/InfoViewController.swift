@@ -125,7 +125,7 @@ import Social
 private struct SocialShareFactory {
     func shareSheet(for serviceType: String) -> SLComposeViewController? {
         if let composeController = SLComposeViewController(forServiceType: serviceType) {
-            composeController.view.tintColor = Colors().yellowColor()
+            composeController.view.tintColor = ColorUtils().yellowColor()
             let completionHandler: SLComposeViewControllerCompletionHandler = { result in
                 if result == SLComposeViewControllerResult.cancelled {
                     print("Cancelled")
