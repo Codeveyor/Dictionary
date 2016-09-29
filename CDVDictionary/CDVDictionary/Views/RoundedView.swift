@@ -9,11 +9,6 @@
 import UIKit
 
 @IBDesignable class RoundedView: UIView {
-    @IBInspectable var viewBackgroundColor: UIColor = UIColor.clear {
-        didSet {
-            backgroundColor = viewBackgroundColor
-        }
-    }
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
             layer.cornerRadius = cornerRadius

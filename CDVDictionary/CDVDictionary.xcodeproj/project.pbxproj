@@ -11,6 +11,11 @@
 		B6E089588FDE76C725E16EED /* Pods_CDVDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA8CE917380E42B3938E1E8 /* Pods_CDVDictionary.framework */; };
 		E509DE8E1D9475BB001C6090 /* AttributedStringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */; };
 		E509DE901D94787E001C6090 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8F1D94787E001C6090 /* ColorUtils.swift */; };
+		E51A97141D9D9DE70073AE71 /* DictionaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97131D9D9DE70073AE71 /* DictionaryViewControllerTests.swift */; };
+		E51A97161D9D9FA60073AE71 /* InfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97151D9D9FA60073AE71 /* InfoViewControllerTests.swift */; };
+		E51A97181D9DA07A0073AE71 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97171D9DA07A0073AE71 /* MainViewControllerTests.swift */; };
+		E51A971A1D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97191D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift */; };
+		E51A971C1D9DA2E50073AE71 /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A971B1D9DA2E50073AE71 /* WebViewControllerTests.swift */; };
 		E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */; };
 		E525BA791D983A39007A3CED /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA781D983A39007A3CED /* AlphabetViewController.swift */; };
 		E525BA7B1D983DE1007A3CED /* PlistReaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */; };
@@ -22,6 +27,8 @@
 		E591C2BC1D96F90E001074CE /* ResizedTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */; };
 		E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */; };
 		E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE61D932D2700A5C632 /* MainViewController.swift */; };
+		E59EC9A31D9D8FB800300B40 /* RoundedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59EC9A21D9D8FB800300B40 /* RoundedViewTests.swift */; };
+		E59EC9A51D9D948A00300B40 /* AlphabetViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59EC9A41D9D948A00300B40 /* AlphabetViewControllerTests.swift */; };
 		E59F50A41D952FEA0056597A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F50A31D952FEA0056597A /* InfoViewController.swift */; };
 		E59F50A61D9531AE0056597A /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F50A51D9531AE0056597A /* InfoCell.swift */; };
 		E59F50A91D958C8E0056597A /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59F50A81D958C8E0056597A /* RoundedView.swift */; };
@@ -63,6 +70,11 @@
 		B2BA60C787F2CB8DE6D1A5B9 /* Pods-CDVDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionaryTests/Pods-CDVDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringUtils.swift; sourceTree = "<group>"; };
 		E509DE8F1D94787E001C6090 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		E51A97131D9D9DE70073AE71 /* DictionaryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewControllerTests.swift; sourceTree = "<group>"; };
+		E51A97151D9D9FA60073AE71 /* InfoViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewControllerTests.swift; sourceTree = "<group>"; };
+		E51A97171D9DA07A0073AE71 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		E51A97191D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizedTextViewControllerTests.swift; sourceTree = "<group>"; };
+		E51A971B1D9DA2E50073AE71 /* WebViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
 		E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryUITests.swift; sourceTree = "<group>"; };
 		E5249A211C600C1900BE9846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +88,8 @@
 		E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizedTextViewController.swift; sourceTree = "<group>"; };
 		E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		E59D0BE61D932D2700A5C632 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E59EC9A21D9D8FB800300B40 /* RoundedViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedViewTests.swift; sourceTree = "<group>"; };
+		E59EC9A41D9D948A00300B40 /* AlphabetViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetViewControllerTests.swift; sourceTree = "<group>"; };
 		E59F50A31D952FEA0056597A /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E59F50A51D9531AE0056597A /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		E59F50A81D958C8E0056597A /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -183,6 +197,12 @@
 		E57094071D9AEF0C00B40FD3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E59EC9A41D9D948A00300B40 /* AlphabetViewControllerTests.swift */,
+				E51A97131D9D9DE70073AE71 /* DictionaryViewControllerTests.swift */,
+				E51A97151D9D9FA60073AE71 /* InfoViewControllerTests.swift */,
+				E51A97171D9DA07A0073AE71 /* MainViewControllerTests.swift */,
+				E51A97191D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift */,
+				E51A971B1D9DA2E50073AE71 /* WebViewControllerTests.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +210,7 @@
 		E57094081D9AEF3200B40FD3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E59EC9A21D9D8FB800300B40 /* RoundedViewTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -554,9 +575,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */,
+				E51A971C1D9DA2E50073AE71 /* WebViewControllerTests.swift in Sources */,
+				E59EC9A51D9D948A00300B40 /* AlphabetViewControllerTests.swift in Sources */,
 				E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */,
+				E51A97141D9D9DE70073AE71 /* DictionaryViewControllerTests.swift in Sources */,
 				E57094001D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift in Sources */,
+				E59EC9A31D9D8FB800300B40 /* RoundedViewTests.swift in Sources */,
+				E51A971A1D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift in Sources */,
+				E51A97161D9D9FA60073AE71 /* InfoViewControllerTests.swift in Sources */,
 				E57094041D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift in Sources */,
+				E51A97181D9DA07A0073AE71 /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

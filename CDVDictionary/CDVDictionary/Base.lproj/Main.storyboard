@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3u-dz-9yQ">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3u-dz-9yQ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -10,7 +10,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" id="ACp-dE-IiL">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="uqp-2T-6Gt">
-                            <rect key="frame" x="11" y="7" width="354" height="30"/>
+                            <rect key="frame" x="10" y="7" width="355" height="30"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Р→С"/>
@@ -81,7 +81,7 @@
         <!--Dictionary View Controller-->
         <scene sceneID="jGL-Q4-SvQ">
             <objects>
-                <viewController id="FJ7-gU-R5Q" customClass="DictionaryViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SRDictionaryViewController" id="FJ7-gU-R5Q" customClass="DictionaryViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZTk-5k-NKU"/>
                         <viewControllerLayoutGuide type="bottom" id="uc7-ef-0qe"/>
@@ -106,10 +106,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dictionaryCell" rowHeight="55" id="NZ6-dx-eC1" customClass="DictionaryCell" customModule="CDVDictionary">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="56" width="1000" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZ6-dx-eC1" id="IaR-s4-lb0">
-                                            <frame key="frameInset" width="375" height="54"/>
+                                            <frame key="frameInset" width="1000" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI5-iZ-rcb">
@@ -207,7 +207,7 @@
         <!--Dictionary View Controller-->
         <scene sceneID="yvI-h2-FqN">
             <objects>
-                <viewController id="CTO-D2-rLH" customClass="DictionaryViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RSDictionaryViewController" id="CTO-D2-rLH" customClass="DictionaryViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eQp-iX-xjv"/>
                         <viewControllerLayoutGuide type="bottom" id="2eM-ux-LrK"/>
@@ -232,10 +232,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dictionaryCell" rowHeight="55" id="Odp-oo-cyE" customClass="DictionaryCell" customModule="CDVDictionary">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="56" width="1000" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Odp-oo-cyE" id="u9j-Mv-mi2">
-                                            <frame key="frameInset" width="375" height="54"/>
+                                            <frame key="frameInset" width="1000" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-Sx-9Be">
@@ -315,7 +315,7 @@
         <!--Info View Controller-->
         <scene sceneID="UrP-yO-rdU">
             <objects>
-                <viewController id="cra-7M-gm2" customClass="InfoViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="cra-7M-gm2" customClass="InfoViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f26-af-1ec"/>
                         <viewControllerLayoutGuide type="bottom" id="yaG-Go-3Fx"/>
@@ -332,10 +332,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="infoCell" rowHeight="60" id="Xcc-cn-bp9" customClass="InfoCell" customModule="CDVDictionary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="960" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xcc-cn-bp9" id="eIL-4A-fbi">
-                                            <frame key="frameInset" width="335" height="59"/>
+                                            <frame key="frameInset" width="960" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FC5-cf-5DI" customClass="RoundedView" customModule="CDVDictionary" customModuleProvider="target">
@@ -347,9 +347,6 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="viewBackgroundColor">
-                                                            <color key="value" red="0.80392156859999997" green="0.58823529409999997" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -443,7 +440,7 @@
         <!--Alphabet View Controller-->
         <scene sceneID="3HO-ng-MCB">
             <objects>
-                <viewController id="PEq-GT-4lv" customClass="AlphabetViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphabetViewController" id="PEq-GT-4lv" customClass="AlphabetViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N7c-om-6Eq"/>
                         <viewControllerLayoutGuide type="bottom" id="6sg-yG-RNP"/>
@@ -459,7 +456,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3sZ-lo-XNF" id="a4Q-Jf-chE">
-                                            <frame key="frameInset" width="375" height="54"/>
+                                            <frame key="frameInset" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Up-AD-rSt">
@@ -520,7 +517,7 @@
         <!--Resized Text View Controller-->
         <scene sceneID="Eu8-r2-gFW">
             <objects>
-                <viewController id="7LG-UY-Yng" customClass="ResizedTextViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResizedTextViewController" id="7LG-UY-Yng" customClass="ResizedTextViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oJO-31-FKs"/>
                         <viewControllerLayoutGuide type="bottom" id="x00-EF-JZ0"/>
@@ -537,7 +534,7 @@
                                         <rect key="frame" x="0.0" y="56" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m62-c1-tUh" id="9dr-B7-GEu">
-                                            <frame key="frameInset" width="375" height="59"/>
+                                            <frame key="frameInset" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6L-P5-PdD">
@@ -590,7 +587,7 @@
         <!--Web View Controller-->
         <scene sceneID="de0-Sd-OnM">
             <objects>
-                <viewController id="67v-Aa-yce" customClass="WebViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="67v-Aa-yce" customClass="WebViewController" customModule="CDVDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9wH-Lr-YkQ"/>
                         <viewControllerLayoutGuide type="bottom" id="ObC-yj-wBZ"/>
