@@ -1,0 +1,21 @@
+# For more information about this configuration visit
+# https://github.com/fastlane/fastlane/tree/master/scan#scanfile
+
+# In general, you can use the options available
+# scan --help
+
+# Remove the # in front of the line to enable the option
+
+# open_report true
+
+# clean true
+
+# scheme "CDVDictionary"
+
+workspace "CDVDictionary/CDVDictionary.xcworkspace"
+
+devices ["iPhone 5", "iPhone 6", "iPhone 6s", "iPad 3", "iPad Pro"]
+
+clean true
+
+output_types "html"
