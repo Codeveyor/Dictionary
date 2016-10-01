@@ -16,6 +16,8 @@ class InfoViewController: UIViewController {
     fileprivate let infoCellIdentifier = "infoCell"
     fileprivate let textSegueIdentifier = "textSegue"
     fileprivate let webSegueIdentifier = "webSegue"
+    fileprivate let serbianAlphabet = "serbianAlphabet"
+    fileprivate let russianAlphabet = "russianAlphabet"
     fileprivate let alphabetSegueIdentifier = "alphabetSegue"
     fileprivate typealias StringTuple = (title: String, text: String)
     fileprivate var sourceArray = [StringTuple]()
@@ -62,10 +64,10 @@ extension InfoViewController: UITableViewDelegate {
         selectedTuple = sourceArray[indexPath.row]
         switch indexPath.row {
         case 0:
-            selectedPlist = "serbianAlphabet"
+            selectedPlist = serbianAlphabet
             performSegue(withIdentifier: alphabetSegueIdentifier, sender: self)
         case 1:
-            selectedPlist = "russianAlphabet"
+            selectedPlist = russianAlphabet
             performSegue(withIdentifier: alphabetSegueIdentifier, sender: self)
         case 2, 3:
             performSegue(withIdentifier: textSegueIdentifier, sender: self)

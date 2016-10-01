@@ -10,11 +10,9 @@
 
 # clean true
 
-# scheme "CDVDictionary"
-
 workspace "CDVDictionary/CDVDictionary.xcworkspace"
 
-devices ["iPhone 5", "iPhone 6", "iPhone 6s", "iPad 3", "iPad Pro"]
+devices ["iPhone 5", "iPhone 6", "iPhone 6s", "iPad"]
 
 clean true
 
