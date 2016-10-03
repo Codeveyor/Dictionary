@@ -16,7 +16,7 @@
 		E51A97181D9DA07A0073AE71 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97171D9DA07A0073AE71 /* MainViewControllerTests.swift */; };
 		E51A971A1D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97191D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift */; };
 		E51A971C1D9DA2E50073AE71 /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A971B1D9DA2E50073AE71 /* WebViewControllerTests.swift */; };
-		E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */; };
+		E522DDBF1DA1731000428963 /* StartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5249A1F1C600C1900BE9846 /* StartUITests.swift */; };
 		E525BA791D983A39007A3CED /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA781D983A39007A3CED /* AlphabetViewController.swift */; };
 		E525BA7B1D983DE1007A3CED /* PlistReaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */; };
 		E525BA7D1D984461007A3CED /* NavigationBarStyleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */; };
@@ -76,7 +76,7 @@
 		E51A97191D9DA1A10073AE71 /* ResizedTextViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizedTextViewControllerTests.swift; sourceTree = "<group>"; };
 		E51A971B1D9DA2E50073AE71 /* WebViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
 		E5249A1D1C600C1900BE9846 /* CDVDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDVDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVDictionaryUITests.swift; sourceTree = "<group>"; };
+		E5249A1F1C600C1900BE9846 /* StartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUITests.swift; sourceTree = "<group>"; };
 		E5249A211C600C1900BE9846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E525BA781D983A39007A3CED /* AlphabetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetViewController.swift; sourceTree = "<group>"; };
 		E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtils.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		E5249A1E1C600C1900BE9846 /* CDVDictionaryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E5249A1F1C600C1900BE9846 /* CDVDictionaryUITests.swift */,
+				E5249A1F1C600C1900BE9846 /* StartUITests.swift */,
 				E5249A211C600C1900BE9846 /* Info.plist */,
 			);
 			path = CDVDictionaryUITests;
@@ -545,7 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5249A201C600C1900BE9846 /* CDVDictionaryUITests.swift in Sources */,
+				E522DDBF1DA1731000428963 /* StartUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
