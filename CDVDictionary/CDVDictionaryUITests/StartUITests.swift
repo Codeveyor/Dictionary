@@ -9,7 +9,6 @@
 import XCTest
 
 class StartUITests: XCTestCase {
-        
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
@@ -21,6 +20,6 @@ class StartUITests: XCTestCase {
     }
 
     func testSwitchSegments() {
-
+        
     }
 }
