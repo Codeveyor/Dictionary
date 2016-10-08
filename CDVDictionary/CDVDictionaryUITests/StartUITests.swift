@@ -22,14 +22,15 @@ class StartUITests: XCTestCase {
         let srLabel = "S→R"
         let iLabel = "ℹ︎"
 
-        let cdvdictionaryMainviewNavigationBar = application.navigationBars["CDVDictionary.MainView"]
-        snapshot(#function)
-        let srSegment = cdvdictionaryMainviewNavigationBar.segmentedControls.buttons[srLabel]
+        let mainViewNavigationBar = application.navigationBars["CDVDictionary.MainView"]
+        let srSegment = mainViewNavigationBar.segmentedControls.buttons[srLabel]
+        snapshot("rsSegment")
         srSegment.tap()
-        snapshot(#function)
-        let iSegment = cdvdictionaryMainviewNavigationBar.segmentedControls.buttons[iLabel]
+        let iSegment = mainViewNavigationBar.segmentedControls.buttons[iLabel]
+        snapshot("srSegment")
         iSegment.tap()
-        let rsSegment = cdvdictionaryMainviewNavigationBar.segmentedControls.buttons[rsLabel]
+        let rsSegment = mainViewNavigationBar.segmentedControls.buttons[rsLabel]
+        snapshot("iSegment")
         rsSegment.tap()
 
         XCTAssertEqual(rsLabel, rsSegment.label, "rs segment label should match")
