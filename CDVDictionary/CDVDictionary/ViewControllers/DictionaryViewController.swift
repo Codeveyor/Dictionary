@@ -114,13 +114,6 @@ extension DictionaryViewController {
         dictionaryTableView.reloadData()
     }
 
-    fileprivate func setupSearchBarAccessibility() {
-        searchBar.isAccessibilityElement = true
-        searchBar.accessibilityLabel = "searchbar"
-        searchBar.accessibilityHint = "searchbar"
-        searchBar.accessibilityElementsHidden = false
-    }
-
     fileprivate func setupAttributedString(cell: DictionaryCell, fullString: String) {
         if searchBar.text!.characters.count > 0 {
             if let searchText = searchBar.text {
