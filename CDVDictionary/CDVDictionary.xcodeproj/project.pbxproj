@@ -24,6 +24,7 @@
 		E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */; };
 		E57094041D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */; };
 		E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */; };
+		E57E9A591DA5826D00B633BD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E9A571DA5823E00B633BD /* SnapshotHelper.swift */; };
 		E591C2BC1D96F90E001074CE /* ResizedTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */; };
 		E59D0BE71D932D2700A5C632 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */; };
 		E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D0BE61D932D2700A5C632 /* MainViewController.swift */; };
@@ -85,6 +86,7 @@
 		E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtilsTests.swift; sourceTree = "<group>"; };
 		E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleUtilsTests.swift; sourceTree = "<group>"; };
 		E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtilsTests.swift; sourceTree = "<group>"; };
+		E57E9A571DA5823E00B633BD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../SnapshotHelper.swift; sourceTree = "<group>"; };
 		E591C2BB1D96F90E001074CE /* ResizedTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizedTextViewController.swift; sourceTree = "<group>"; };
 		E59D0BE51D932D2700A5C632 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		E59D0BE61D932D2700A5C632 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				E5249A1F1C600C1900BE9846 /* StartUITests.swift */,
 				E5249A211C600C1900BE9846 /* Info.plist */,
+				E57E9A571DA5823E00B633BD /* SnapshotHelper.swift */,
 			);
 			path = CDVDictionaryUITests;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E522DDBF1DA1731000428963 /* StartUITests.swift in Sources */,
+				E57E9A591DA5826D00B633BD /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

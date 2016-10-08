@@ -13,6 +13,7 @@ class StartUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
+        setupSnapshot(application)
         application.launch()
     }
 
@@ -22,8 +23,10 @@ class StartUITests: XCTestCase {
         let iLabel = "ℹ︎"
 
         let cdvdictionaryMainviewNavigationBar = application.navigationBars["CDVDictionary.MainView"]
+        snapshot(#function)
         let srSegment = cdvdictionaryMainviewNavigationBar.segmentedControls.buttons[srLabel]
         srSegment.tap()
+        snapshot(#function)
         let iSegment = cdvdictionaryMainviewNavigationBar.segmentedControls.buttons[iLabel]
         iSegment.tap()
         let rsSegment = cdvdictionaryMainviewNavigationBar.segmentedControls.buttons[rsLabel]
