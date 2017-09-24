@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoCell: UITableViewCell {
+final class InfoCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var customAccessoryView: UIImageView!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResizedTextViewController: UIViewController {
+final class ResizedTextViewController: UIViewController {
     @IBOutlet weak var textTableView: UITableView!
     var navigationTitle: String!
     var text: String!

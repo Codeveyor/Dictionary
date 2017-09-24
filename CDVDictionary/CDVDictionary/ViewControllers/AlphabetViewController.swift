@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlphabetViewController: UIViewController {
+final class AlphabetViewController: UIViewController {
     @IBOutlet weak var alphabetTableView: UITableView!
 
     var navigationTitle: String!

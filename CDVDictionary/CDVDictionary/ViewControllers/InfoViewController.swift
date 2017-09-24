@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+final class InfoViewController: UIViewController {
     @IBOutlet weak var infoTableView: UITableView!
     fileprivate let infoTableViewNumberOfSections = 1
     fileprivate let infoTableViewHeaderFooterHeight: CGFloat = 0.01

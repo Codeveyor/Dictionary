@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DictionaryViewController: UIViewController {
+final class DictionaryViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var dictionaryTableView: UITableView!
     @IBOutlet weak var dictionaryTableViewBottomConstraint: NSLayoutConstraint!
