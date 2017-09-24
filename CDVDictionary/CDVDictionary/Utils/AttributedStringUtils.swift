@@ -15,7 +15,7 @@ struct AttributedStringUtils {
         let str = NSString(string: fullString)
         let theRange = str.range(of: subString, options: NSString.CompareOptions.caseInsensitive)
         let yellowColor = ColorUtils().attributedYellowColor()
-        attributedString.addAttribute(NSBackgroundColorAttributeName, value: yellowColor, range: theRange)
+        attributedString.addAttribute(NSAttributedStringKey.backgroundColor, value: yellowColor, range: theRange)
         return attributedString
     }
 }

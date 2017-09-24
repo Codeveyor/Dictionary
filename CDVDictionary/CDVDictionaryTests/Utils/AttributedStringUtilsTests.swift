@@ -30,7 +30,7 @@ class AttributedStringUtilsTests: XCTestCase {
         let str = NSString(string: fullString)
         let theRange = str.range(of: subString, options: NSString.CompareOptions.caseInsensitive)
         let yellowColor = ColorUtils().yellowColor().withAlphaComponent(0.8)
-        attributedString.addAttribute(NSBackgroundColorAttributeName, value: yellowColor, range: theRange)
+        attributedString.addAttribute(NSAttributedStringKey.backgroundColor, value: yellowColor, range: theRange)
 
         let result = sut.createAttributedString(fullString: fullString, subString: subString)
         XCTAssertNotNil(result, "result should be not nil")

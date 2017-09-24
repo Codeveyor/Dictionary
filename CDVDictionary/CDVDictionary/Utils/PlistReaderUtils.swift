@@ -23,7 +23,7 @@ class PlistReaderUtils: NSObject {
     }
 
     fileprivate func pathInTestBundle(forFileWithName name: String) -> String? {
-        let bundle = Bundle(for:object_getClass(self))
+        let bundle = Bundle(for:object_getClass(self)!)
         let safePath = bundle.path(forResource: name, ofType: plistExtension)
         return safePath
     }
