@@ -12,8 +12,8 @@ final class AlphabetViewController: UIViewController {
 
     @IBOutlet weak var alphabetTableView: UITableView!
 
-    var navigationTitle: String!
-    var dictionaryName: String!
+    var navigationTitle = ""
+    var dictionaryName = ""
     private var sourceArray = [String]()
     private var displayDictionary: Dictionary = [String: String]()
     private let alphabetTableViewNumberOfSections: Int = 1
@@ -48,7 +48,9 @@ final class AlphabetViewController: UIViewController {
     }
 
     private func setupNavigationBar() {
-        NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
+        guard let navigationBar = navigationController?.navigationBar else { return }
+
+        NavigationBarStyleUtils().style(navigationBar: navigationBar)
         title = navigationTitle
     }
 }
