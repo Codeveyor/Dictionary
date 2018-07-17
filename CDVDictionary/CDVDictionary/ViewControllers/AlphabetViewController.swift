@@ -9,23 +9,47 @@
 import UIKit
 
 final class AlphabetViewController: UIViewController {
+
     @IBOutlet weak var alphabetTableView: UITableView!
 
     var navigationTitle: String!
     var dictionaryName: String!
-    fileprivate var sourceArray = [String]()
-    fileprivate var displayDictionary: Dictionary = [String: String]()
-    fileprivate let alphabetTableViewNumberOfSections: Int = 1
-    fileprivate let alphabetTableViewCellHeight: CGFloat = 56.0
-    fileprivate let alphabetTableViewHeaderFooterHeight: CGFloat = 0.01
-    fileprivate let alphabetCellIdentifier = "alphabetCell"
-    fileprivate let colors = ColorUtils()
+    private var sourceArray = [String]()
+    private var displayDictionary: Dictionary = [String: String]()
+    private let alphabetTableViewNumberOfSections: Int = 1
+    private let alphabetTableViewHeaderFooterHeight: CGFloat = 0.01
+    private let alphabetCellIdentifier = "alphabetCell"
+    private let colors = ColorUtils()
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupData(plistName: dictionaryName)
         setupNavigationBar()
         setupTableView()
+    }
+
+    // MARK: - Utils
+
+    private func setupData(plistName: String) {
+        guard let data = PlistReaderUtils().read(plistName) else {
+            return
+        }
+
+        sourceArray = data.sourceArray
+        displayDictionary = data.displayDictionary
+        alphabetTableView.reloadData()
+    }
+
+    private func setupTableView() {
+        alphabetTableView.rowHeight = UITableViewAutomaticDimension
+        alphabetTableView.estimatedRowHeight = 56.0
+    }
+
+    private func setupNavigationBar() {
+        NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
+        title = navigationTitle
     }
 }
 
@@ -39,15 +63,20 @@ extension AlphabetViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: alphabetCellIdentifier, for: indexPath) as! DictionaryCell
-        let letter = sourceArray[indexPath.row]
-        cell.wordLabel?.text = letter
-        cell.translationLabel?.text = displayDictionary[letter]
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = colors.cellYellowColor()
-        } else {
-            cell.backgroundColor = colors.cellWhiteColor()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: alphabetCellIdentifier, for: indexPath) as? DictionaryCell else {
+            fatalError("ERROR! Unable to dequeue DictionaryCell")
         }
+
+        let letter = sourceArray[indexPath.row]
+        
+        guard let translation = displayDictionary[letter] else {
+            fatalError("ERROR! Unable to get value for key from dictionary")
+        }
+
+        cell.updateCellWith(letter: letter,
+                            translation: translation,
+                            indexPathRow: indexPath.row)
+
         return cell
     }
 }
@@ -59,27 +88,5 @@ extension AlphabetViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return alphabetTableViewHeaderFooterHeight
-    }
-}
-
-extension AlphabetViewController {
-    // MARK: Utils
-    fileprivate func setupData(plistName: String) {
-        guard let data = PlistReaderUtils().read(plistName) else {
-            return
-        }
-        sourceArray = data.sourceArray
-        displayDictionary = data.displayDictionary
-        alphabetTableView.reloadData()
-    }
-
-    fileprivate func setupTableView() {
-        alphabetTableView.rowHeight = UITableViewAutomaticDimension
-        alphabetTableView.estimatedRowHeight = alphabetTableViewCellHeight
-    }
-
-    fileprivate func setupNavigationBar() {
-        NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
-        title = navigationTitle
     }
 }

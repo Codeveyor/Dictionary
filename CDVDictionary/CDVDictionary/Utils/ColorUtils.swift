@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: refactor to lets from functions
 struct ColorUtils {
     func yellowColor() -> UIColor {
         return color(r: 205.0,

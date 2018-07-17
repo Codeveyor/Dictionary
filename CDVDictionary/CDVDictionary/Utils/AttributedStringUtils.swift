@@ -9,13 +9,12 @@
 import UIKit
 
 struct AttributedStringUtils {
-    func createAttributedString(fullString: String, subString: String) -> NSMutableAttributedString
-    {
+    func createAttributedString(fullString: String, subString: String) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: fullString)
         let fullNSString = NSString(string: fullString)
-        let theRange = fullNSString.range(of: subString, options: .caseInsensitive)
+        let range = fullNSString.range(of: subString, options: .caseInsensitive)
         let yellowColor = ColorUtils().attributedYellowColor()
-        attributedString.addAttribute(.backgroundColor, value: yellowColor, range: theRange)
+        attributedString.addAttribute(.backgroundColor, value: yellowColor, range: range)
 
         return attributedString
     }
