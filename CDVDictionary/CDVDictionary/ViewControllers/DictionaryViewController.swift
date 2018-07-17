@@ -76,7 +76,7 @@ extension DictionaryViewController: UITableViewDelegate {
 extension DictionaryViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         displayArray.removeAll()
-        if searchText.characters.count == 0 {
+        if searchText.count == 0 {
             displayArray.append(contentsOf: sourceArray)
         } else {
             for word in sourceArray {
@@ -115,7 +115,7 @@ extension DictionaryViewController {
     }
 
     fileprivate func setupAttributedString(cell: DictionaryCell, fullString: String) {
-        if searchBar.text!.characters.count > 0 {
+        if searchBar.text!.count > 0 {
             if let searchText = searchBar.text {
                 let attributedString = attributedStringUtils.createAttributedString(fullString: fullString, subString: searchText)
                 cell.wordLabel.attributedText = attributedString
