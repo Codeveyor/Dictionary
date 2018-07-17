@@ -12,14 +12,13 @@ final class AlphabetViewController: UIViewController {
 
     @IBOutlet weak var alphabetTableView: UITableView!
 
+    private struct Constants {
+        static let alphabetTableViewHeaderFooterHeight = CGFloat(0.01)
+    }
     var navigationTitle = ""
     var dictionaryName = ""
     private var sourceArray = [String]()
-    private var displayDictionary: Dictionary = [String: String]()
-    private let alphabetTableViewNumberOfSections: Int = 1
-    private let alphabetTableViewHeaderFooterHeight: CGFloat = 0.01
-    private let alphabetCellIdentifier = "alphabetCell"
-    private let colors = ColorUtils()
+    private var displayDictionary = [String: String]()
 
     // MARK: - View Lifecycle
 
@@ -57,7 +56,7 @@ final class AlphabetViewController: UIViewController {
 
 extension AlphabetViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return alphabetTableViewNumberOfSections
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,7 +64,7 @@ extension AlphabetViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: alphabetCellIdentifier, for: indexPath) as? DictionaryCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "alphabetCell", for: indexPath) as? DictionaryCell else {
             fatalError("ERROR! Unable to dequeue DictionaryCell")
         }
 
@@ -85,10 +84,10 @@ extension AlphabetViewController: UITableViewDataSource {
 
 extension AlphabetViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return alphabetTableViewHeaderFooterHeight
+        return Constants.alphabetTableViewHeaderFooterHeight
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return alphabetTableViewHeaderFooterHeight
+        return Constants.alphabetTableViewHeaderFooterHeight
     }
 }
