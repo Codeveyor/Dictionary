@@ -9,20 +9,22 @@
 import UIKit
 
 final class WebViewController: UIViewController {
+
     @IBOutlet weak var webView: UIWebView!
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupURL()
         setupNavigationBar()
     }
-}
 
-extension WebViewController {
-    //MARK: Utils
+    // MARK: - Utils
+
     fileprivate func setupURL() {
-        let url = URL(string:"http://codeveyor.com")
-        webView.loadRequest(URLRequest(url: url!))
+        guard let url = URL(string: "http://codeveyor.com") else { return }
+        webView.loadRequest(URLRequest(url: url))
     }
 
     fileprivate func setupNavigationBar() {
