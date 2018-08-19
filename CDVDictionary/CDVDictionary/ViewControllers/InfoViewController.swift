@@ -21,8 +21,8 @@ final class InfoViewController: UIViewController {
 
     private typealias StringTuple = (title: String, text: String)
     private var sourceArray = [StringTuple]()
-    // TODO: test
-    private var selectedTuple: StringTuple!
+
+    private var selectedTuple: StringTuple?
     private var selectedPlist = ""
 
     // MARK: - View Lifecycle
@@ -36,32 +36,24 @@ final class InfoViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.alphabetSegueIdentifier {
-            guard let alphabetViewController = segue.destination as? AlphabetViewController else { return }
+            guard let alphabetViewController = segue.destination as? AlphabetViewController,
+                let title = selectedTuple?.title else { return }
 
             alphabetViewController.dictionaryName = selectedPlist
-            alphabetViewController.navigationTitle = selectedTuple.title
+            alphabetViewController.navigationTitle = title
         } else if segue.identifier == Constants.textSegueIdentifier {
-            guard let textViewController = segue.destination as? ResizedTextViewController else { return }
+            guard let textViewController = segue.destination as? ResizedTextViewController,
+                let title = selectedTuple?.title,
+                let text = selectedTuple?.text else { return }
 
-            textViewController.navigationTitle = selectedTuple.title
-            textViewController.text = selectedTuple.text
+            textViewController.navigationTitle = title
+            textViewController.text = text
         }
-    }
-
-    // MARK: - Actions
-
-    @IBAction func didPressFacebook(button: UIButton) {
-        showSheet(serviceType: SLServiceTypeFacebook)
-    }
-
-    @IBAction func didPressTwitter(button: UIButton) {
-        showSheet(serviceType: SLServiceTypeTwitter)
     }
 
     // MARK: - Utils
 
     private func setupDataSource() {
-        // TODO: test
         sourceArray = [StringTuple("Srpski Abeceda", ""),
                        StringTuple("Русский алфавит", ""),
                        StringTuple("Сербский язык", "Сербский Язык. \n\nСе́рбский язы́к — один из славянских языков. Вместе с болгарским, македонским, словенским, черногорским, хорватским и боснийским относится к южнославянской подгруппе. Последние три языка часто объединяют с сербским в один (сербохорватский язык); в этом случае отдельные сербский, хорватский и боснийский языки считают региональными вариантами сербохорватского. На сербском языке говорят в Сербии и Черногории (до 2006 г. составлявших общее конфедеративное государство), в отдельных восточных районах Хорватии, а также в боснийском регионе Республика Сербская. Число говорящих — около 11 млн. человек. \n\nПисьменность \n\nСербский язык использует в качестве письменности два алфавита: основанный на кириллице («Вуковица») и основанный на латинице («Гаевица»). Кириллица считается официальной, однако вне официального обихода латиница используется также часто. В каждом по 30 букв; существует однозначное соответствие между буквами одного алфавита и другого (но простое автоматическое преобразование текста возможно только в одну сторону, так как латинские диграфы изредка соответствуют парам раздельных кириллических букв: конјункција, поджупан). Га́евица, или хорватская латиница (названа по имени своего создателя, деятеля хорватского возрождения Людевита Гая) — латинский алфавит для хорватского языка, созданный в середине XIX века и с тех пор не менявшийся. Используется в Хорватии.\n\nГаевица \n\nГаевица была заимствована у хорватов другими народами, Боснии и Герцеговины, Сербии и Черногории. Кириллический аналог — Вуковица, которая используется для записи только сербского языка. Для основы данного словаря была выбрана именно Гаевица имеющая большую схожесть с сербским в Вуковице, но имеющим написание кириллическим алфавитом. Таким образом словарь может использоваться в большей степени не только в Сербии, Хорватии но также и во всех странах южнославянской подгруппы языков."),

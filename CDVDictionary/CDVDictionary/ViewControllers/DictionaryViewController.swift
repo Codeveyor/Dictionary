@@ -134,7 +134,6 @@ extension DictionaryViewController: UITableViewDelegate {
 
 extension DictionaryViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // TODO: test
         displayArray.removeAll()
         if searchText.isEmpty {
             displayArray.append(contentsOf: sourceArray)

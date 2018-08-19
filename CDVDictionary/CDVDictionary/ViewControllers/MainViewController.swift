@@ -15,9 +15,6 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var srContainerView: UIView!
     @IBOutlet weak var infoContainerView: UIView!
 
-    // TODO: test
-    private var selectedPlist: String!
-
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
@@ -62,14 +59,13 @@ final class MainViewController: UIViewController {
         let containersArray = [rsContainerView, srContainerView, infoContainerView]
         for container in containersArray {
             if container == containerView {
-                // TODO: test
-//                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     container?.alpha = 1.0
-//                })
+                })
             } else {
-//                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     container?.alpha = 0.0
-//                })
+                })
             }
         }
     }
