@@ -3,11 +3,11 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'CDVDictionary' do
+target 'Dictionary' do
 
 end
 
-target 'CDVDictionaryTests' do
+target 'DictionaryTests' do
 
 end
 
