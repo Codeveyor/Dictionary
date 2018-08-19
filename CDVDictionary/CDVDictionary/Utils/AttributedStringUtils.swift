@@ -13,8 +13,10 @@ struct AttributedStringUtils {
         let attributedString = NSMutableAttributedString(string: fullString)
         let fullNSString = NSString(string: fullString)
         let range = fullNSString.range(of: subString, options: .caseInsensitive)
-        let yellowColor = ColorUtils().attributedYellowColor()
-        attributedString.addAttribute(.backgroundColor, value: yellowColor, range: range)
+        let yellowColor = UIColor.attributed
+        attributedString.addAttribute(.backgroundColor,
+                                      value: yellowColor,
+                                      range: range)
 
         return attributedString
     }

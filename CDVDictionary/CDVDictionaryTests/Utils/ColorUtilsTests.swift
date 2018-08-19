@@ -23,7 +23,7 @@ class ColorUtilsTests: XCTestCase {
 
     func testYellowColor() {
         let testColor = color(r: 205.0, g: 150.0, b: 62.0)
-        let yellowColor = sut.yellowColor()
+        let yellowColor = sut.baseYellow
 
         XCTAssertEqual(testColor, yellowColor, "colors should be equal")
     }

@@ -18,8 +18,7 @@ final class DictionaryCell: UITableViewCell {
                         indexPathRow: Int) {
         wordLabel?.text = letter
         translationLabel?.text = translation
-        
-        let colors = ColorUtils()
-        backgroundColor = indexPathRow % 2 == 0 ? colors.cellYellowColor() : colors.cellWhiteColor()
+
+        backgroundColor = indexPathRow % 2 == 0 ? .baseCell : .white
     }
 }

@@ -25,7 +25,6 @@ final class DictionaryViewController: UIViewController {
     private var displayDictionary = [String: String]()
 
     private let attributedStringUtils = AttributedStringUtils()
-    private let colors = ColorUtils()
 
     // MARK: - View Lifecycle
 
@@ -76,9 +75,11 @@ final class DictionaryViewController: UIViewController {
 
     private func setupColorView(indexPathRow: Int) -> UIColor {
         if indexPathRow % 2 == 0 {
-            return colors.yellowColor()
+            return .base
         }
-        return colors.cellYellowColor().withAlphaComponent(0.3)
+
+        let baseCellColor = UIColor.baseCell.withAlphaComponent(0.3)
+        return baseCellColor
     }
 
     @objc private func keyboardWillHide(notification: NSNotification) {

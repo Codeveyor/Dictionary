@@ -142,7 +142,7 @@ private struct SocialShareFactory {
             return nil
         }
 
-        composeController.view.tintColor = ColorUtils().yellowColor()
+        composeController.view.tintColor = .base
         let completionHandler: SLComposeViewControllerCompletionHandler = { result in
             if result == SLComposeViewControllerResult.cancelled {
                 print("Cancelled")

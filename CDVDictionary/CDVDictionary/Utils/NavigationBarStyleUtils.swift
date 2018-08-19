@@ -10,7 +10,7 @@ import UIKit
 
 struct NavigationBarStyleUtils {
     func style(navigationBar: UINavigationBar) {
-        navigationBar.tintColor = ColorUtils().yellowColor()
+        navigationBar.tintColor = .base
         navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "",
                                                                    style: .plain,
                                                                    target: nil,
