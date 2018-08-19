@@ -9,38 +9,38 @@
 import UIKit
 
 final class MainViewController: UIViewController {
+
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var rsContainerView: UIView!
     @IBOutlet weak var srContainerView: UIView!
     @IBOutlet weak var infoContainerView: UIView!
 
-    fileprivate var selectedPlist: String!
-    fileprivate var savedSelectedPlist = "savedSelectedPlist"
-    fileprivate let russianSerbianPlist = "DICT_R-S"
-    fileprivate let serbianRussianPlist = "DICT_S-R"
-    fileprivate let rsSegueIdentifier = "rsSegue"
-    fileprivate let srSegueIdentifier = "srSegue"
-    fileprivate let infoSegueIdentifier = "infoSegue"
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.selectedSegmentIndex = 0
     }
 
+    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == rsSegueIdentifier {
-            let dictionaryViewController =  segue.destination as! DictionaryViewController
-            dictionaryViewController.dictionaryName = russianSerbianPlist
-        } else if segue.identifier == srSegueIdentifier {
-            let dictionaryViewController =  segue.destination as! DictionaryViewController
-            dictionaryViewController.dictionaryName = serbianRussianPlist
+        if segue.identifier == "rsSegue" {
+            guard let dictionaryViewController =  segue.destination as? DictionaryViewController else { return }
+
+            dictionaryViewController.dictionaryName = "DICT_R-S"
+        } else if segue.identifier == "srSegue" {
+            guard let dictionaryViewController =  segue.destination as? DictionaryViewController else { return }
+
+            dictionaryViewController.dictionaryName = "DICT_S-R"
         }
     }
-}
 
-extension MainViewController {
-    @IBAction func segmentedControlDidChanged(segmentedControl: UISegmentedControl) {
+    // MARK: - Action
+
+    @IBAction func didChange(segmentedControl: UISegmentedControl) {
         view.endEditing(true)
+
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             highlight(containerView: rsContainerView)
@@ -53,11 +53,13 @@ extension MainViewController {
         }
     }
 
-    fileprivate func highlight(containerView: UIView) {
+    // MARK: - Util
+
+    private func highlight(containerView: UIView) {
         let containersArray = [rsContainerView, srContainerView, infoContainerView]
         for container in containersArray {
             if container == containerView {
-                UIView.animate(withDuration: 0.3, animations: { 
+                UIView.animate(withDuration: 0.3, animations: {
                     container?.alpha = 1.0
                 })
             } else {

@@ -10,7 +10,9 @@ import XCTest
 @testable import CDVDictionary
 
 class DictionaryViewControllerTests: XCTestCase {
+
     var sut: DictionaryViewController!
+
     override func setUp() {
         super.setUp()
         sut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SRDictionaryViewController") as! DictionaryViewController
