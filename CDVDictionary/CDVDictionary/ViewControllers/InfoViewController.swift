@@ -69,16 +69,6 @@ final class InfoViewController: UIViewController {
                        StringTuple("Сайт разработчика", "")
         ]
     }
-
-    private func showSheet(serviceType: String) {
-        if let sheet = SocialShareFactory().shareSheet(for: serviceType) {
-            present(sheet, animated: true)
-        } else {
-            let alertController = UIAlertController(title: "Ошибка", message: "Аккаунт не настроен в Настройках устройства", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .cancel) { (action) in })
-            present(alertController, animated: true)
-        }
-    }
 }
 
 extension InfoViewController: UITableViewDataSource {
@@ -130,35 +120,5 @@ extension InfoViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return Constants.infoTableViewHeaderFooterHeight
-    }
-}
-
-import Social
-
-private struct SocialShareFactory {
-    // TODO: test
-    func shareSheet(for serviceType: String) -> SLComposeViewController? {
-        guard let composeController = SLComposeViewController(forServiceType: serviceType) else {
-            return nil
-        }
-
-        composeController.view.tintColor = .base
-        let completionHandler: SLComposeViewControllerCompletionHandler = { result in
-            if result == SLComposeViewControllerResult.cancelled {
-                print("Cancelled")
-            } else {
-                print("Done")
-            }
-            composeController.dismiss(animated: true, completion: nil)
-        }
-        if let image = UIImage(named: "preview") {
-            composeController.add(image)
-        }
-
-        composeController.completionHandler = completionHandler
-        composeController.setInitialText("Русско-сербский словарь для iOS - Балкания")
-        composeController.add(URL(string: "http://codeveyor.com"))
-
-        return composeController
     }
 }
