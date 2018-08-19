@@ -13,9 +13,9 @@ struct AttributedStringUtils {
         let attributedString = NSMutableAttributedString(string: fullString)
         let fullNSString = NSString(string: fullString)
         let range = fullNSString.range(of: subString, options: .caseInsensitive)
-        let yellowColor = UIColor.attributed
+
         attributedString.addAttribute(.backgroundColor,
-                                      value: yellowColor,
+                                      value: UIColor.attributed,
                                       range: range)
 
         return attributedString

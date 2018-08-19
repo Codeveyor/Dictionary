@@ -66,9 +66,8 @@ final class DictionaryViewController: UIViewController {
     }
 
     private func setupAttributedString(cell: DictionaryCell, fullString: String) {
-        // TODO: test
         guard let text = searchBar.text,
-            text.isEmpty else { return }
+            text.count >= 0 else { return }
 
         cell.wordLabel.attributedText = attributedStringUtils.createAttributedString(fullString: fullString, subString: text)
     }
