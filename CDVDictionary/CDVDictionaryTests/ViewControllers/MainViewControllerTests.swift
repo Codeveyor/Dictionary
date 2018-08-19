@@ -10,7 +10,9 @@ import XCTest
 @testable import CDVDictionary
 
 class MainViewControllerTests: XCTestCase {
+
     var sut: MainViewController!
+
     override func setUp() {
         super.setUp()
         sut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as! MainViewController

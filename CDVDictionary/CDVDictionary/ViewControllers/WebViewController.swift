@@ -22,12 +22,12 @@ final class WebViewController: UIViewController {
 
     // MARK: - Utils
 
-    fileprivate func setupURL() {
+    private func setupURL() {
         guard let url = URL(string: "http://codeveyor.com") else { return }
         webView.loadRequest(URLRequest(url: url))
     }
 
-    fileprivate func setupNavigationBar() {
+    private func setupNavigationBar() {
         NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
         title = "CODEVEYOR.COM"
     }

@@ -10,7 +10,9 @@ import XCTest
 @testable import CDVDictionary
 
 class PlistReaderUtilsTests: XCTestCase {
-    fileprivate var sut: PlistReaderUtils!
+
+    private var sut: PlistReaderUtils!
+
     override func setUp() {
         super.setUp()
         sut = PlistReaderUtils()
@@ -27,8 +29,8 @@ class PlistReaderUtilsTests: XCTestCase {
         let displayDictionaryCount = result?.displayDictionary.count
 
         XCTAssertNotNil(result, "should have result after reading plist")
-        XCTAssertTrue(sourceArrayCount! > 0, "source array sshould not be empty")
-        XCTAssertTrue(displayDictionaryCount! > 0, "display dictionary sshould not be empty")
+        XCTAssertTrue(sourceArrayCount! > 0, "source array should not be empty")
+        XCTAssertTrue(displayDictionaryCount! > 0, "display dictionary should not be empty")
         XCTAssertEqual(sourceArrayCount, displayDictionaryCount, "collections should have equal number of items")
     }
 }

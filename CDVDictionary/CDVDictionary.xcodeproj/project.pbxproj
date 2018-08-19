@@ -21,7 +21,7 @@
 		E525BA7B1D983DE1007A3CED /* PlistReaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */; };
 		E525BA7D1D984461007A3CED /* NavigationBarStyleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */; };
 		E57094001D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */; };
-		E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */; };
+		E57094021D9ACF8600B40FD3 /* UIColor+AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094011D9ACF8600B40FD3 /* UIColor+AttributedTests.swift */; };
 		E57094041D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */; };
 		E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */; };
 		E57E9A591DA5826D00B633BD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E9A571DA5823E00B633BD /* SnapshotHelper.swift */; };
@@ -83,7 +83,7 @@
 		E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtils.swift; sourceTree = "<group>"; };
 		E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleUtils.swift; sourceTree = "<group>"; };
 		E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringUtilsTests.swift; sourceTree = "<group>"; };
-		E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtilsTests.swift; sourceTree = "<group>"; };
+		E57094011D9ACF8600B40FD3 /* UIColor+AttributedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AttributedTests.swift"; sourceTree = "<group>"; };
 		E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleUtilsTests.swift; sourceTree = "<group>"; };
 		E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtilsTests.swift; sourceTree = "<group>"; };
 		E57E9A571DA5823E00B633BD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../SnapshotHelper.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */,
-				E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */,
+				E57094011D9ACF8600B40FD3 /* UIColor+AttributedTests.swift */,
 				E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */,
 				E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */,
 			);
@@ -578,7 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */,
+				E57094021D9ACF8600B40FD3 /* UIColor+AttributedTests.swift in Sources */,
 				E51A971C1D9DA2E50073AE71 /* WebViewControllerTests.swift in Sources */,
 				E59EC9A51D9D948A00300B40 /* AlphabetViewControllerTests.swift in Sources */,
 				E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */,
@@ -703,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -752,7 +752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

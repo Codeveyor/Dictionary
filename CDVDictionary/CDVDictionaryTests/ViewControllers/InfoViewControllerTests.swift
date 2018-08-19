@@ -10,7 +10,9 @@ import XCTest
 @testable import CDVDictionary
 
 class InfoViewControllerTests: XCTestCase {
+
     var sut: InfoViewController!
+
     override func setUp() {
         super.setUp()
         sut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController

@@ -9,7 +9,9 @@
 import XCTest
 
 class StartUITests: XCTestCase {
-    fileprivate let application = XCUIApplication()
+
+    private let application = XCUIApplication()
+
     override func setUp() {
         super.setUp()
         continueAfterFailure = false

@@ -10,7 +10,9 @@ import XCTest
 @testable import CDVDictionary
 
 class NavigationBarStyleUtilsTests: XCTestCase {
-    fileprivate var sut: NavigationBarStyleUtils!
+
+    private var sut: NavigationBarStyleUtils!
+    
     override func setUp() {
         super.setUp()
         sut = NavigationBarStyleUtils()
@@ -25,6 +27,6 @@ class NavigationBarStyleUtilsTests: XCTestCase {
         let navigationBar = UINavigationBar()
 
         sut.style(navigationBar: navigationBar)
-        XCTAssertEqual(navigationBar.tintColor, ColorUtils().yellowColor(), "navigation bar should have yellow tint color")
+        XCTAssertEqual(navigationBar.tintColor, .base, "navigation bar should have base tint color")
     }
 }
