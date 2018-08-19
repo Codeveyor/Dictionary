@@ -13,39 +13,94 @@ final class DictionaryViewController: UIViewController {
     @IBOutlet weak var dictionaryTableView: UITableView!
     @IBOutlet weak var dictionaryTableViewBottomConstraint: NSLayoutConstraint!
 
+    private struct Constants {
+        static let dictionaryTableViewHeaderFooterHeight =  CGFloat(0.01)
+        static let animationDuration = TimeInterval(0.3)
+    }
+
     var dictionaryName: String!
 
-    fileprivate var sourceArray = [String]()
-    fileprivate var displayArray = [String]()
-    fileprivate var displayDictionary: Dictionary = [String: String]()
-    fileprivate let dictionaryCellIdentifier = "dictionaryCell"
-    fileprivate let dictionaryTableViewNumberOfSections: Int = 1
-    fileprivate let dictionaryTableViewCellHeight: CGFloat = 50.0
-    fileprivate let dictionaryTableViewHeaderFooterHeight: CGFloat = 0.01
-    fileprivate let animationDuration: TimeInterval = 0.3
-    fileprivate let attributedStringUtils = AttributedStringUtils()
-    fileprivate let colors = ColorUtils()
+    private var sourceArray = [String]()
+    private var displayArray = [String]()
+    private var displayDictionary = [String: String]()
+
+    private let attributedStringUtils = AttributedStringUtils()
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         if let dictionaryName = dictionaryName {
             setupData(plistName: dictionaryName)
         }
         setupTableView()
 
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(keyboardWillHide(notification:)),
+                                       name: .UIKeyboardWillHide,
+                                       object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(keyboardWillShow(notification:)),
+                                       name: .UIKeyboardWillShow,
+                                       object: nil)
     }
 
-    deinit {
-        NotificationCenter.default.removeObserver(self)
+    // MARK: - Utils
+
+    private func setupTableView() {
+        dictionaryTableView.rowHeight = UITableViewAutomaticDimension
+        dictionaryTableView.estimatedRowHeight = 50.0
+    }
+
+    private func setupData(plistName: String) {
+        guard let data = PlistReaderUtils().read(plistName) else {
+            return
+        }
+
+        sourceArray = data.sourceArray
+        displayDictionary = data.displayDictionary
+        displayArray.append(contentsOf: sourceArray)
+        dictionaryTableView.reloadData()
+    }
+
+    private func setupAttributedString(cell: DictionaryCell, fullString: String) {
+        guard let text = searchBar.text,
+            text.count >= 0 else { return }
+
+        cell.wordLabel.attributedText = attributedStringUtils.createAttributedString(fullString: fullString, subString: text)
+    }
+
+    private func setupColorView(indexPathRow: Int) -> UIColor {
+        if indexPathRow % 2 == 0 {
+            return .base
+        }
+
+        let baseCellColor = UIColor.baseCell.withAlphaComponent(0.3)
+        return baseCellColor
+    }
+
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: Constants.animationDuration) {
+            self.dictionaryTableViewBottomConstraint.constant = 0
+        }
+    }
+
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+
+        UIView.animate(withDuration: Constants.animationDuration) {
+            self.dictionaryTableViewBottomConstraint.constant = keyboardSize.height
+        }
     }
 }
 
 extension DictionaryViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dictionaryTableViewNumberOfSections
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,38 +108,43 @@ extension DictionaryViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: dictionaryCellIdentifier, for: indexPath) as! DictionaryCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "dictionaryCell", for: indexPath) as? DictionaryCell else {
+            fatalError("ERROR! Unable to dequeue DictionaryCell")
+        }
+
         let word = displayArray[indexPath.row]
         cell.wordLabel?.text = word
         cell.translationLabel?.text = displayDictionary[word]
         setupAttributedString(cell: cell, fullString: word)
         cell.colorView.backgroundColor = setupColorView(indexPathRow: indexPath.row)
+
         return cell
     }
 }
 
 extension DictionaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return dictionaryTableViewHeaderFooterHeight
+        return Constants.dictionaryTableViewHeaderFooterHeight
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return dictionaryTableViewHeaderFooterHeight
+        return Constants.dictionaryTableViewHeaderFooterHeight
     }
 }
 
 extension DictionaryViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         displayArray.removeAll()
-        if searchText.characters.count == 0 {
+        if searchText.isEmpty {
             displayArray.append(contentsOf: sourceArray)
         } else {
             for word in sourceArray {
-                if word.range(of: searchText, options: NSString.CompareOptions.caseInsensitive) != nil {
+                if word.range(of: searchText, options: .caseInsensitive) != nil {
                     displayArray.append(word)
                 }
             }
         }
+
         dictionaryTableView.reloadData()
     }
 
@@ -94,54 +154,5 @@ extension DictionaryViewController: UISearchBarDelegate {
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-    }
-}
-
-extension DictionaryViewController {
-    // MARK: Utils
-    fileprivate func setupTableView() {
-        dictionaryTableView.rowHeight = UITableViewAutomaticDimension
-        dictionaryTableView.estimatedRowHeight = dictionaryTableViewCellHeight
-    }
-
-    fileprivate func setupData(plistName: String) {
-        guard let data = PlistReaderUtils().read(plistName) else {
-            return
-        }
-        sourceArray = data.sourceArray
-        displayDictionary = data.displayDictionary
-        displayArray.append(contentsOf: sourceArray)
-        dictionaryTableView.reloadData()
-    }
-
-    fileprivate func setupAttributedString(cell: DictionaryCell, fullString: String) {
-        if searchBar.text!.characters.count > 0 {
-            if let searchText = searchBar.text {
-                let attributedString = attributedStringUtils.createAttributedString(fullString: fullString, subString: searchText)
-                cell.wordLabel.attributedText = attributedString
-            }
-        }
-    }
-
-    fileprivate func setupColorView(indexPathRow: Int) -> UIColor {
-        if indexPathRow % 2 == 0 {
-            return colors.yellowColor()
-        }
-        return colors.cellYellowColor().withAlphaComponent(0.3)
-    }
-
-    @objc fileprivate func keyboardWillHide(notification: NSNotification) {
-        UIView.animate(withDuration: animationDuration) {
-            self.dictionaryTableViewBottomConstraint.constant = 0
-        }
-    }
-
-    @objc fileprivate func keyboardWillShow(notification: NSNotification) {
-        guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            return
-        }
-        UIView.animate(withDuration: animationDuration) {
-            self.dictionaryTableViewBottomConstraint.constant = keyboardSize.height
-        }
     }
 }

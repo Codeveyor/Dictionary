@@ -10,7 +10,7 @@
 		2FAFCF0A03D2BD445883B9C9 /* Pods_CDVDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303ACA160560E22FBE7BCADD /* Pods_CDVDictionaryTests.framework */; };
 		B6E089588FDE76C725E16EED /* Pods_CDVDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA8CE917380E42B3938E1E8 /* Pods_CDVDictionary.framework */; };
 		E509DE8E1D9475BB001C6090 /* AttributedStringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */; };
-		E509DE901D94787E001C6090 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8F1D94787E001C6090 /* ColorUtils.swift */; };
+		E509DE901D94787E001C6090 /* UIColor+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509DE8F1D94787E001C6090 /* UIColor+Attributed.swift */; };
 		E51A97141D9D9DE70073AE71 /* DictionaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97131D9D9DE70073AE71 /* DictionaryViewControllerTests.swift */; };
 		E51A97161D9D9FA60073AE71 /* InfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97151D9D9FA60073AE71 /* InfoViewControllerTests.swift */; };
 		E51A97181D9DA07A0073AE71 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A97171D9DA07A0073AE71 /* MainViewControllerTests.swift */; };
@@ -21,7 +21,7 @@
 		E525BA7B1D983DE1007A3CED /* PlistReaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */; };
 		E525BA7D1D984461007A3CED /* NavigationBarStyleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */; };
 		E57094001D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */; };
-		E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */; };
+		E57094021D9ACF8600B40FD3 /* UIColor+AttributedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094011D9ACF8600B40FD3 /* UIColor+AttributedTests.swift */; };
 		E57094041D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */; };
 		E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */; };
 		E57E9A591DA5826D00B633BD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E9A571DA5823E00B633BD /* SnapshotHelper.swift */; };
@@ -70,7 +70,7 @@
 		B19F1B40CE5D174926FADD12 /* Pods-CDVDictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionaryTests/Pods-CDVDictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2BA60C787F2CB8DE6D1A5B9 /* Pods-CDVDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDVDictionaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDVDictionaryTests/Pods-CDVDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringUtils.swift; sourceTree = "<group>"; };
-		E509DE8F1D94787E001C6090 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		E509DE8F1D94787E001C6090 /* UIColor+Attributed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Attributed.swift"; sourceTree = "<group>"; };
 		E51A97131D9D9DE70073AE71 /* DictionaryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewControllerTests.swift; sourceTree = "<group>"; };
 		E51A97151D9D9FA60073AE71 /* InfoViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewControllerTests.swift; sourceTree = "<group>"; };
 		E51A97171D9DA07A0073AE71 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtils.swift; sourceTree = "<group>"; };
 		E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleUtils.swift; sourceTree = "<group>"; };
 		E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringUtilsTests.swift; sourceTree = "<group>"; };
-		E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtilsTests.swift; sourceTree = "<group>"; };
+		E57094011D9ACF8600B40FD3 /* UIColor+AttributedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AttributedTests.swift"; sourceTree = "<group>"; };
 		E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleUtilsTests.swift; sourceTree = "<group>"; };
 		E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReaderUtilsTests.swift; sourceTree = "<group>"; };
 		E57E9A571DA5823E00B633BD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../SnapshotHelper.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				E509DE8D1D9475BB001C6090 /* AttributedStringUtils.swift */,
-				E509DE8F1D94787E001C6090 /* ColorUtils.swift */,
+				E509DE8F1D94787E001C6090 /* UIColor+Attributed.swift */,
 				E525BA7C1D984461007A3CED /* NavigationBarStyleUtils.swift */,
 				E525BA7A1D983DE1007A3CED /* PlistReaderUtils.swift */,
 			);
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				E57093FF1D9ACC2400B40FD3 /* AttributedStringUtilsTests.swift */,
-				E57094011D9ACF8600B40FD3 /* ColorUtilsTests.swift */,
+				E57094011D9ACF8600B40FD3 /* UIColor+AttributedTests.swift */,
 				E57094031D9AD4D000B40FD3 /* NavigationBarStyleUtilsTests.swift */,
 				E57094051D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift */,
 			);
@@ -379,7 +379,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Alex Golub";
 				TargetAttributes = {
 					E5249A1C1C600C1900BE9846 = {
@@ -567,7 +567,7 @@
 				E59F50A91D958C8E0056597A /* RoundedView.swift in Sources */,
 				E5C2D7531C231A9600F705D0 /* AppDelegate.swift in Sources */,
 				E59F50A41D952FEA0056597A /* InfoViewController.swift in Sources */,
-				E509DE901D94787E001C6090 /* ColorUtils.swift in Sources */,
+				E509DE901D94787E001C6090 /* UIColor+Attributed.swift in Sources */,
 				E59F50A61D9531AE0056597A /* InfoCell.swift in Sources */,
 				E509DE8E1D9475BB001C6090 /* AttributedStringUtils.swift in Sources */,
 				E59D0BE81D932D2700A5C632 /* MainViewController.swift in Sources */,
@@ -578,7 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57094021D9ACF8600B40FD3 /* ColorUtilsTests.swift in Sources */,
+				E57094021D9ACF8600B40FD3 /* UIColor+AttributedTests.swift in Sources */,
 				E51A971C1D9DA2E50073AE71 /* WebViewControllerTests.swift in Sources */,
 				E59EC9A51D9D948A00300B40 /* AlphabetViewControllerTests.swift in Sources */,
 				E57094061D9ADE6C00B40FD3 /* PlistReaderUtilsTests.swift in Sources */,
@@ -669,12 +669,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -701,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -722,12 +724,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -748,7 +752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -765,7 +769,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96837XF4KD;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.org.balkania;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -782,7 +786,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96837XF4KD;
 				INFOPLIST_FILE = CDVDictionary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.org.balkania;
 				PRODUCT_NAME = "$(TARGET_NAME)";

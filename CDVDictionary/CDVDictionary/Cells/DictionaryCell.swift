@@ -12,4 +12,13 @@ final class DictionaryCell: UITableViewCell {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var translationLabel: UILabel!
     @IBOutlet weak var colorView: UIView!
+
+    func updateCellWith(letter: String,
+                        translation: String,
+                        indexPathRow: Int) {
+        wordLabel?.text = letter
+        translationLabel?.text = translation
+
+        backgroundColor = indexPathRow % 2 == 0 ? .baseCell : .white
+    }
 }

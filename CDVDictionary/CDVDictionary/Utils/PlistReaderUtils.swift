@@ -8,23 +8,32 @@
 
 import Foundation
 
-class PlistReaderUtils: NSObject {
-    fileprivate let plistExtension = ".plist"
+class PlistReaderUtils {
 
     func read(_ plistName: String) -> (sourceArray: [String], displayDictionary: [String : String])? {
         if let path = pathInTestBundle(forFileWithName: plistName) {
-            let displayDictionary = NSDictionary(contentsOfFile: path) as! [String: String]
+            guard let displayDictionary = NSDictionary(contentsOfFile: path) as? [String: String] else {
+                fatalError("ERROR! Unable to get contents of file")
+            }
+
             var sourceArray = [String]()
             sourceArray.append(contentsOf: displayDictionary.keys)
-            sourceArray.sort { $0.localizedCaseInsensitiveCompare($1) == ComparisonResult.orderedAscending }
+            sourceArray.sort { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
+
             return (sourceArray, displayDictionary)
         }
+
         return nil
     }
 
-    fileprivate func pathInTestBundle(forFileWithName name: String) -> String? {
-        let bundle = Bundle(for:object_getClass(self)!)
-        let safePath = bundle.path(forResource: name, ofType: plistExtension)
+    private func pathInTestBundle(forFileWithName name: String) -> String? {
+        guard let selfClass = object_getClass(self) else {
+            fatalError("ERROR! Unable to get PlistReaderUtils reference")
+        }
+
+        let bundle = Bundle(for: selfClass)
+        let safePath = bundle.path(forResource: name, ofType: ".plist")
+
         return safePath
     }
 }

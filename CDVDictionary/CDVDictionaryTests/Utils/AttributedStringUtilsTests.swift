@@ -11,7 +11,9 @@ import Foundation
 @testable import CDVDictionary
 
 class AttributedStringUtilsTests: XCTestCase {
-    fileprivate var sut: AttributedStringUtils!
+
+    private var sut: AttributedStringUtils!
+
     override func setUp() {
         super.setUp()
         sut = AttributedStringUtils()
@@ -27,12 +29,15 @@ class AttributedStringUtilsTests: XCTestCase {
         let fullString = "word"
 
         let attributedString = NSMutableAttributedString(string: fullString)
-        let str = NSString(string: fullString)
-        let theRange = str.range(of: subString, options: NSString.CompareOptions.caseInsensitive)
-        let yellowColor = ColorUtils().yellowColor().withAlphaComponent(0.8)
-        attributedString.addAttribute(NSAttributedStringKey.backgroundColor, value: yellowColor, range: theRange)
+        let fullNSString = NSString(string: fullString)
+        let range = fullNSString.range(of: subString, options: .caseInsensitive)
+
+        attributedString.addAttribute(.backgroundColor,
+                                      value: UIColor.attributed,
+                                      range: range)
 
         let result = sut.createAttributedString(fullString: fullString, subString: subString)
+
         XCTAssertNotNil(result, "result should be not nil")
         XCTAssertEqual(attributedString, result, "results should be equal")
     }

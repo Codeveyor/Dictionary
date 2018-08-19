@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3u-dz-9yQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v3u-dz-9yQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,7 +71,7 @@
                             </segments>
                             <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="segmentedControlDidChangedWithSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="aef-mL-vNm"/>
+                                <action selector="didChangeWithSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="iAQ-6n-qUz"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
@@ -139,7 +138,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVU-Vp-aFz">
-                                                    <rect key="frame" x="20" y="6" width="335" height="24"/>
+                                                    <rect key="frame" x="27" y="9" width="321" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="Xno-6w-C0Q"/>
                                                     </constraints>
@@ -148,7 +147,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRC-uw-B7h">
-                                                    <rect key="frame" x="20" y="30" width="335" height="22"/>
+                                                    <rect key="frame" x="27" y="33" width="321" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="JZl-ce-Jrh"/>
                                                     </constraints>
@@ -274,7 +273,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dk-Sx-9Be">
-                                                    <rect key="frame" x="20" y="6" width="335" height="24"/>
+                                                    <rect key="frame" x="27" y="9" width="321" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="g4v-Mc-pXN"/>
                                                     </constraints>
@@ -283,7 +282,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ot-ad-dKL">
-                                                    <rect key="frame" x="20" y="30" width="335" height="22"/>
+                                                    <rect key="frame" x="27" y="33" width="321" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="wjl-qj-5MD"/>
                                                     </constraints>
@@ -452,29 +451,6 @@
                                     <outlet property="delegate" destination="cra-7M-gm2" id="4ea-1t-1a3"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vd-6s-dKM">
-                                <rect key="frame" x="20" y="523" width="165" height="60"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Cu0-Om-qPf"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="3" height="9"/>
-                                <state key="normal" image="facebook"/>
-                                <connections>
-                                    <action selector="facebookButtonDidPressedWithButton:" destination="cra-7M-gm2" eventType="touchUpInside" id="LPK-tj-0ds"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BW3-nK-y5L">
-                                <rect key="frame" x="190" y="523" width="165" height="60"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="NfC-qj-eH7"/>
-                                </constraints>
-                                <state key="normal" image="twitter"/>
-                                <connections>
-                                    <action selector="twitterButtonDidPressedWithButton:" destination="cra-7M-gm2" eventType="touchUpInside" id="nVp-m5-XMZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
@@ -482,18 +458,12 @@
                         </accessibility>
                         <constraints>
                             <constraint firstItem="0ye-Vw-Asg" firstAttribute="top" secondItem="f26-af-1ec" secondAttribute="bottom" id="3uU-A0-Q7g"/>
-                            <constraint firstItem="yaG-Go-3Fx" firstAttribute="top" secondItem="5vd-6s-dKM" secondAttribute="bottom" constant="20" id="5Rs-dw-g9m"/>
                             <constraint firstAttribute="trailing" secondItem="0ye-Vw-Asg" secondAttribute="trailing" id="7PI-Lq-lmQ"/>
                             <constraint firstItem="yaG-Go-3Fx" firstAttribute="top" secondItem="0ye-Vw-Asg" secondAttribute="bottom" id="HDO-Qm-BeU"/>
                             <constraint firstItem="yBU-Fb-zb9" firstAttribute="leading" secondItem="h3Y-ep-zsr" secondAttribute="leading" constant="20" id="Ptj-mf-7RO"/>
                             <constraint firstItem="yBU-Fb-zb9" firstAttribute="top" secondItem="f26-af-1ec" secondAttribute="bottom" constant="40" id="Zzw-X0-diP"/>
-                            <constraint firstItem="BW3-nK-y5L" firstAttribute="leading" secondItem="5vd-6s-dKM" secondAttribute="trailing" constant="5" id="bv5-BH-pFM"/>
-                            <constraint firstAttribute="trailing" secondItem="BW3-nK-y5L" secondAttribute="trailing" constant="20" id="d4F-Wa-ZrL"/>
                             <constraint firstItem="0ye-Vw-Asg" firstAttribute="leading" secondItem="h3Y-ep-zsr" secondAttribute="leading" id="hPU-89-6UM"/>
                             <constraint firstAttribute="trailing" secondItem="yBU-Fb-zb9" secondAttribute="trailing" constant="20" id="iDc-YY-t3G"/>
-                            <constraint firstItem="BW3-nK-y5L" firstAttribute="width" secondItem="5vd-6s-dKM" secondAttribute="width" id="jcB-7T-qY2"/>
-                            <constraint firstItem="yaG-Go-3Fx" firstAttribute="top" secondItem="BW3-nK-y5L" secondAttribute="bottom" constant="20" id="qUF-aT-yLp"/>
-                            <constraint firstItem="5vd-6s-dKM" firstAttribute="leading" secondItem="h3Y-ep-zsr" secondAttribute="leading" constant="20" id="qfq-bO-lRo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -717,7 +687,5 @@
     <resources>
         <image name="accessory" width="15" height="15"/>
         <image name="background_map" width="320" height="480"/>
-        <image name="facebook" width="24" height="24"/>
-        <image name="twitter" width="24" height="24"/>
     </resources>
 </document>

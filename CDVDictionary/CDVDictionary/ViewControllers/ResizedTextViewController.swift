@@ -9,57 +9,64 @@
 import UIKit
 
 final class ResizedTextViewController: UIViewController {
+
     @IBOutlet weak var textTableView: UITableView!
+
+    private struct Constants {
+        static let textTableViewHeaderFooterHeight = CGFloat(0.01)
+    }
     var navigationTitle: String!
     var text: String!
-    fileprivate let textTableViewNumberOfSections = 1
-    fileprivate let textTableViewNumberOfRows = 1
-    fileprivate let textTableViewHeaderFooterHeight: CGFloat = 0.01
-    fileprivate let textTableViewCellHeight: CGFloat = 60.0
-    fileprivate let textCellIdentifier = "textCell"
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupNavigationBar()
     }
+
+    // MARK: - Utils
+
+    private func setupTableView() {
+        textTableView.rowHeight = UITableViewAutomaticDimension
+        textTableView.estimatedRowHeight = 60.0
+    }
+
+    private func setupNavigationBar() {
+        guard let navigationBar = navigationController?.navigationBar else { return }
+
+        NavigationBarStyleUtils().style(navigationBar: navigationBar)
+        title = navigationTitle
+    }
 }
 
 extension ResizedTextViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return textTableViewNumberOfSections
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return textTableViewNumberOfRows
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! InfoCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as? InfoCell else {
+            fatalError("ERROR! Unable to dequeue InfoCell")
+        }
+
         cell.label?.text = text
+
         return cell
     }
 }
 
 extension ResizedTextViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return textTableViewHeaderFooterHeight
+        return Constants.textTableViewHeaderFooterHeight
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return textTableViewHeaderFooterHeight
-    }
-}
-
-extension ResizedTextViewController {
-    // MARK: Utils
-    fileprivate func setupTableView() {
-        textTableView.rowHeight = UITableViewAutomaticDimension
-        textTableView.estimatedRowHeight = textTableViewCellHeight
-    }
-
-    fileprivate func setupNavigationBar() {
-        NavigationBarStyleUtils().style(navigationBar: (navigationController?.navigationBar)!)
-        title = navigationTitle
+        return Constants.textTableViewHeaderFooterHeight
     }
 }
