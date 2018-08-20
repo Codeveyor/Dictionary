@@ -1,6 +1,0 @@
-framework module Pods_CDVDictionaryTests {
-  umbrella header "Pods-CDVDictionaryTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
