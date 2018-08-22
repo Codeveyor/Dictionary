@@ -33,5 +33,5 @@ DerivedData
 Carthage/Build
 
 # Resources
-Dictionary/Resources/*.plist
+Dictionary/Resources/**/*.plist
 screenshots/
